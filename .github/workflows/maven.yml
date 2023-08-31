@@ -38,4 +38,4 @@ jobs:
 
       # Build & Test
       - name: Build & Test with Maven
-        run: mvn -B -U clean verify ${{ matrix.profile }}
+        run: mvn -s ./.maven-settings.xml -Pcontinuous-integration -B -U clean verify ${{ matrix.profile }}

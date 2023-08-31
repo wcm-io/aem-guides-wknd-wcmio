@@ -54,7 +54,6 @@
                     <group>com.adobe.aem.guides</group>
                     <name>aem-guides-wknd.ui.apps</name>
                     <packageType>application</packageType>
-                    <accessControlHandling>merge</accessControlHandling>
                     <repositoryStructurePackages>
                         <repositoryStructurePackage>
                             <groupId>com.adobe.aem.guides</groupId>
@@ -63,15 +62,6 @@
                     </repositoryStructurePackages>
                     <dependencies>
                     </dependencies>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.day.jcr.vault</groupId>
-                <artifactId>content-package-maven-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <verbose>true</verbose>
-                    <failOnError>true</failOnError>
                 </configuration>
             </plugin>
 
@@ -110,6 +100,7 @@
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>aem-guides-wknd.core</artifactId>
             <version>${project.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -117,6 +108,7 @@
             <artifactId>aem-guides-wknd.ui.frontend</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -124,11 +116,13 @@
             <artifactId>aem-guides-wknd.ui.apps.structure</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>aem-sdk-api</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!-- HTL dependencies needed for the HTL Maven Plugin source code generation -->
