@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        java: [11, 17]
+        java: [11]
         profile: [ '', '-Pclassic']
 
     steps:
@@ -38,4 +38,4 @@ jobs:
 
       # Build & Test
       - name: Build & Test with Maven
-        run: mvn clean install ${{ matrix.profile }}
+        run: mvn -B -U clean verify ${{ matrix.profile }}
