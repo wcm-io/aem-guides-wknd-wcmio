@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        java: [8, 11]
+        java: [11, 17]
         profile: [ '', '-Pclassic']
 
     steps:
@@ -32,6 +32,7 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v3
         with:
+          distribution: temurin
           java-version: ${{ matrix.java }}
           cache: maven
 
