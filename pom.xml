@@ -19,7 +19,7 @@
     <parent>
         <groupId>io.wcm.maven</groupId>
         <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-        <version>2.1.5-SNAPSHOT</version>
+        <version>2.1.6</version>
         <relativePath />
     </parent>
 
@@ -55,14 +55,6 @@
     </modules>
 
     <properties>
-        <aem.host>localhost</aem.host>
-        <aem.port>4502</aem.port>
-        <aem.publish.host>localhost</aem.publish.host>
-        <aem.publish.port>4503</aem.publish.port>
-        <sling.user>admin</sling.user>
-        <sling.password>admin</sling.password>
-        <vault.user>admin</vault.user>
-        <vault.password>admin</vault.password>
         <aem.sdk.api>2022.11.9850.20221116T162329Z-220900</aem.sdk.api>
         <componentGroupName>WKND Site</componentGroupName>
         <core.wcm.components.version>2.20.8</core.wcm.components.version>
@@ -165,14 +157,6 @@ Bundle-DocURL:
                 </plugin>
                 <plugin>
                     <groupId>org.apache.sling</groupId>
-                    <artifactId>sling-maven-plugin</artifactId>
-                    <configuration>
-                        <slingUrl>http://${aem.host}:${aem.port}/system/console</slingUrl>
-                        <deploymentMethod>WebConsole</deploymentMethod>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.sling</groupId>
                     <artifactId>htl-maven-plugin</artifactId>
                     <configuration>
                         <failOnWarnings>true</failOnWarnings>
@@ -199,120 +183,14 @@ Bundle-DocURL:
     </build>
 
     <profiles>
-  
-        <!-- Development profile: install only the bundle -->
-        <profile>
-            <id>autoInstallBundle</id>
-            <!--
-                To enable this feature for a bundle, the sling-maven-plugin
-                (without configuration) needs to be included:
 
-                <plugin>
-                    <groupId>org.apache.sling</groupId>
-                    <artifactId>sling-maven-plugin</artifactId>
-                 </plugin>
-            -->
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.apache.sling</groupId>
-                            <artifactId>sling-maven-plugin</artifactId>
-                            <executions>
-                                <execution>
-                                    <id>install-bundle</id>
-                                    <goals>
-                                        <goal>install</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
-            </build>
-        </profile>
-
+        <!-- AEM 6.5 -->
         <profile>
-            <id>autoInstallPackage</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.apache.jackrabbit</groupId>
-                            <artifactId>filevault-package-maven-plugin</artifactId>
-                            <executions>
-                                <execution>
-                                    <id>create-package</id>
-                                    <goals>
-                                        <goal>package</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                        </plugin>
-                        <plugin>
-                            <groupId>com.day.jcr.vault</groupId>
-                            <artifactId>content-package-maven-plugin</artifactId>
-                            <executions>
-                                <execution>
-                                    <id>install-package</id>
-                                    <goals>
-                                        <goal>install</goal>
-                                    </goals>
-                                    <configuration>
-                                        <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
-                                    </configuration>
-                                </execution>
-                            </executions>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
-            </build>
-        </profile>
-
-        <profile>
-            <id>autoInstallPackagePublish</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.apache.jackrabbit</groupId>
-                            <artifactId>filevault-package-maven-plugin</artifactId>
-                            <executions>
-                                <execution>
-                                    <id>create-package</id>
-                                    <goals>
-                                        <goal>package</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                        </plugin>
-                        <plugin>
-                            <groupId>com.day.jcr.vault</groupId>
-                            <artifactId>content-package-maven-plugin</artifactId>
-                            <executions>
-                                <execution>
-                                    <id>install-package-publish</id>
-                                    <goals>
-                                        <goal>install</goal>
-                                    </goals>
-                                    <configuration>
-                                        <targetURL>http://${aem.publish.host}:${aem.publish.port}/crx/packmgr/service.jsp</targetURL>
-                                    </configuration>
-                                </execution>
-                            </executions>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
-            </build>
+            <id>classic</id>
+            <properties>
+                <sling.url>http://localhost:45025</sling.url>
+                <sling.publish.url>http://localhost:45035</sling.publish.url>
+            </properties>
         </profile>
 
         <!-- Profile gets active when building in Cloud Manager -->
