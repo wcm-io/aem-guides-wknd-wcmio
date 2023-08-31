@@ -144,10 +144,6 @@ Bundle-DocURL:
                     </dependencies>
                 </plugin>
                 <plugin>
-                    <groupId>biz.aQute.bnd</groupId>
-                    <artifactId>bnd-baseline-maven-plugin</artifactId>
-                </plugin>
-                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <configuration>
@@ -171,11 +167,6 @@ Bundle-DocURL:
                             <cloudManagerTarget>none</cloudManagerTarget>
                         </properties>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>com.adobe.aem</groupId>
-                    <artifactId>aemanalyser-maven-plugin</artifactId>
-                    <extensions>true</extensions>
                 </plugin>
             </plugins>
         </pluginManagement>
