@@ -5,7 +5,7 @@
 WKND versions are compatible with the following versions of Adobe Experience Manager:
 
 * AEM as a Cloud Service
-* AEM 6.5 SP16
+* AEM 6.5 SP17
 
 ## How to use/install
 
@@ -46,7 +46,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 WKND Version | AEM as a Cloud Service | AEM 6.5   | Java SE | Maven
 -------------|------------------------|-----------|---------|---------
-Latest (main branch)| Continual              | **6.5.13.0+** |  11  | 3.3.9+
+Latest (main branch)| Continual              | **6.5.17.0+** |  11  | 3.3.9+
 
 Setup your local development environment for [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) or for [older versions of AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 

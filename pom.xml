@@ -55,10 +55,9 @@
     </modules>
 
     <properties>
-        <aem.sdk.api>2022.11.9850.20221116T162329Z-220900</aem.sdk.api>
+        <aem.sdk.api>2023.8.13239.20230824T154635Z-230702</aem.sdk.api>
         <componentGroupName>WKND Site</componentGroupName>
         <core.wcm.components.version>2.20.8</core.wcm.components.version>
-        <uber.jar.version>6.5.13</uber.jar.version>
         <wknd-shared.version>3.1.0</wknd-shared.version>
         <wknd-shared.65.version>2.2.2</wknd-shared.65.version>
     </properties>
@@ -250,7 +249,39 @@ Bundle-DocURL:
     <!-- ====================================================================== -->
     <!-- D E P E N D E N C I E S -->
     <!-- ====================================================================== -->
-    <dependencyManagement>
+    <dependencies>
+
+        <!-- OSGi bundle and versioning annotations -->
+        <dependency>
+          <groupId>org.osgi</groupId>
+          <artifactId>org.osgi.annotation.bundle</artifactId>
+          <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.osgi</groupId>
+          <artifactId>org.osgi.annotation.versioning</artifactId>
+          <scope>provided</scope>
+        </dependency>
+    
+        <!-- OSGi DS and metatype annotations -->
+        <dependency>
+          <groupId>org.osgi</groupId>
+          <artifactId>org.osgi.service.component.annotations</artifactId>
+          <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.osgi</groupId>
+          <artifactId>org.osgi.service.metatype.annotations</artifactId>
+          <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.sling</groupId>
+          <artifactId>org.apache.sling.servlets.annotations</artifactId>
+          <scope>provided</scope>
+        </dependency>
+    
+      </dependencies>
+      <dependencyManagement>
         <dependencies>
 
             <!-- AEM as a Cloud Service SDK -->
@@ -260,7 +291,16 @@ Bundle-DocURL:
                 <version>${aem.sdk.api}</version>
             </dependency>
 
-             <!-- AEM Core Components -->
+            <!-- AEM 6.5 Dependency -->
+            <dependency>
+                <groupId>io.wcm.maven</groupId>
+                <artifactId>io.wcm.maven.aem-dependencies</artifactId>
+                <version>6.5.17.0001</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- AEM Core Components -->
             <dependency>
                 <groupId>com.adobe.cq</groupId>
                 <artifactId>core.wcm.components.core</artifactId>
@@ -306,24 +346,14 @@ Bundle-DocURL:
                 <version>4.1.0</version>
             </dependency>
             <dependency>
-                <groupId>junit-addons</groupId>
-                <artifactId>junit-addons</artifactId>
-                <version>1.4</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>junit</groupId>
-                        <artifactId>junit</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>xerces</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
                 <groupId>io.wcm</groupId>
                 <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
                 <version>5.3.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.testing.logging-mock</artifactId>
+                <version>2.0.0</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.sling</groupId>

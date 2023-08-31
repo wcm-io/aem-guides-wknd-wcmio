@@ -121,7 +121,7 @@
 
         <dependency>
             <groupId>com.adobe.aem</groupId>
-            <artifactId>aem-sdk-api</artifactId>
+            <artifactId>uber-jar</artifactId>
             <scope>provided</scope>
         </dependency>
 
