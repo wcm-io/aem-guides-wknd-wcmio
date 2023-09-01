@@ -4,5 +4,5 @@
     cq:isContainer="true"
     jcr:primaryType="cq:Component"
     jcr:title="Container"
-    sling:resourceSuperType="core/wcm/components/container/v1/container"
+    sling:resourceSuperType="wcm-io/wcm/core/components/container/v1/container"
     componentGroup="WKND.Content"/>

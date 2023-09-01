@@ -3,10 +3,12 @@
   "hc.tags": ["wknd","systemready"],
   "statusForMissing": "TEMPORARILY_UNAVAILABLE",
   "components.list": [
+    "com.adobe.aem.guides.wknd.core.config.impl.LinkHandlerConfigImpl",
     /*
-    "io.wcm.samples.siteapi.config.impl.LinkHandlerConfigImpl",
-    "io.wcm.samples.siteapi.config.impl.MediaFormatProviderImpl",
-    "io.wcm.samples.siteapi.config.impl.MediaHandlerConfigImpl",
+    "com.adobe.aem.guides.wknd.core.config.impl.MediaFormatProviderImpl",
+    */
+    "com.adobe.aem.guides.wknd.core.config.impl.MediaHandlerConfigImpl",
+    /*
     "io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy",
     */
     "io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy",

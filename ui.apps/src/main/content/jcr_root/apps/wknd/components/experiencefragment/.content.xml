@@ -3,5 +3,5 @@
     cq:styleElements="[div,section,article,main,aside,header,footer]"
     jcr:primaryType="cq:Component"
     jcr:title="Experience Fragment"
-    sling:resourceSuperType="core/wcm/components/experiencefragment/v2/experiencefragment"
+    sling:resourceSuperType="wcm-io/wcm/core/components/experiencefragment/v2/experiencefragment"
     componentGroup="WKND.Content"/>
