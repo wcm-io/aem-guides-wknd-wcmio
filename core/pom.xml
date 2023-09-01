@@ -83,7 +83,17 @@ Import-Package: javax.annotation;version=0.0.0,*
         <!-- wcm.io -->
         <dependency>
             <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.caconfig.extensions</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
             <artifactId>io.wcm.caconfig.editor</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.sling.commons</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -93,7 +103,12 @@ Import-Package: javax.annotation;version=0.0.0,*
         </dependency>
         <dependency>
             <groupId>io.wcm</groupId>
-            <artifactId>io.wcm.sling.commons</artifactId>
+            <artifactId>io.wcm.wcm.commons</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.wcm.ui.granite</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -108,12 +123,12 @@ Import-Package: javax.annotation;version=0.0.0,*
         </dependency>
         <dependency>
             <groupId>io.wcm</groupId>
-            <artifactId>io.wcm.handler.link</artifactId>
+            <artifactId>io.wcm.handler.media</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.wcm</groupId>
-            <artifactId>io.wcm.handler.media</artifactId>
+            <artifactId>io.wcm.handler.link</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -123,17 +138,7 @@ Import-Package: javax.annotation;version=0.0.0,*
         </dependency>
         <dependency>
             <groupId>io.wcm</groupId>
-            <artifactId>io.wcm.wcm.commons</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.wcm</groupId>
             <artifactId>io.wcm.wcm.core.components</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.wcm</groupId>
-            <artifactId>io.wcm.wcm.ui.granite</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
