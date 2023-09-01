@@ -60,12 +60,6 @@
                             <artifactId>aem-guides-wknd.ui.apps.structure</artifactId>
                         </repositoryStructurePackage>
                     </repositoryStructurePackages>
-                    <dependencies>
-                        <dependency>
-                            <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>aem-guides-wknd.ui.config</artifactId>
-                        </dependency>
-                    </dependencies>
                 </configuration>
             </plugin>
 
@@ -118,14 +112,6 @@
         <dependency>
             <groupId>com.adobe.aem.guides</groupId>
             <artifactId>aem-guides-wknd.ui.apps.structure</artifactId>
-            <version>${project.version}</version>
-            <type>zip</type>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.ui.config</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
             <scope>provided</scope>
