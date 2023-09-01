@@ -150,40 +150,9 @@
                     <plugin>
                         <groupId>org.apache.jackrabbit</groupId>
                         <artifactId>filevault-package-maven-plugin</artifactId>                    
-                        <extensions>true</extensions>
                         <configuration>
                             <finalName>aem-guides-wknd.all-${project.version}-classic</finalName>
-                            <group>com.adobe.aem.guides</group>
-                            <embeddeds>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd.ui.apps</artifactId>
-                                    <type>zip</type>
-                                    <target>/apps/wknd-packages/application/install</target>
-                                </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd.core</artifactId>
-                                    <target>/apps/wknd-packages/application/install</target>
-                                </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd.ui.content</artifactId>
-                                    <type>zip</type>
-                                    <target>/apps/wknd-packages/content/install</target>
-                                </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd.ui.config</artifactId>
-                                    <type>zip</type>
-                                    <target>/apps/wknd-packages/application/install</target>
-                                </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
-                                    <type>zip</type>
-                                    <target>/apps/wknd-packages/content/install</target>
-                                </embedded>
+                            <embeddeds combine.children="append">
                                 <embedded>
                                     <groupId>com.adobe.cq</groupId>
                                     <artifactId>core.wcm.components.content</artifactId>
@@ -201,12 +170,6 @@
                                     <artifactId>core.wcm.components.core</artifactId>
                                     <target>/apps/wknd-vendor-packages/application/install</target>
                                 </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd-shared.ui.content</artifactId>
-                                    <type>zip</type>
-                                    <target>/apps/wknd-vendor-packages/content/install</target>
-                                </embedded>                           
                             </embeddeds>
                         </configuration>
                     </plugin>
