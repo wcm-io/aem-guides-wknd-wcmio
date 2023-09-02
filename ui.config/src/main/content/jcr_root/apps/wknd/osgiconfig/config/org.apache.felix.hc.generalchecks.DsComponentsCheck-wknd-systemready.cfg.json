@@ -3,14 +3,18 @@
   "hc.tags": ["wknd","systemready"],
   "statusForMissing": "TEMPORARILY_UNAVAILABLE",
   "components.list": [
+    /*
     "io.wcm.samples.siteapi.config.impl.LinkHandlerConfigImpl",
     "io.wcm.samples.siteapi.config.impl.MediaFormatProviderImpl",
     "io.wcm.samples.siteapi.config.impl.MediaHandlerConfigImpl",
     "io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy",
+    */
     "io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy",
     "io.wcm.handler.mediasource.dam.impl.dynamicmedia.DynamicMediaSupportServiceImpl",
     "io.wcm.siteapi.processor.impl.SiteApiServlet",
+    /*
     "io.wcm.siteapi.processor.caconfig.impl.ContextAwareConfigurationExportImpl",
+    */
     "io.wcm.siteapi.handler.url.impl.HandlerUrlBuilder"
   ]
 }
