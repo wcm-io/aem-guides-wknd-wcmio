@@ -60,8 +60,6 @@
                             <artifactId>aem-guides-wknd.ui.apps.structure</artifactId>
                         </repositoryStructurePackage>
                     </repositoryStructurePackages>
-                    <dependencies>
-                    </dependencies>
                 </configuration>
             </plugin>
 

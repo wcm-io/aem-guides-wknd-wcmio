@@ -69,7 +69,6 @@
                         <dependency>
                             <groupId>com.adobe.aem.guides</groupId>
                             <artifactId>aem-guides-wknd.ui.apps</artifactId>
-                            <version>${project.version}</version>
                         </dependency>
                         <dependency>
                             <groupId>com.adobe.aem.guides</groupId>
