@@ -289,6 +289,7 @@ public class ImageListImpl implements ImageList {
             properties.put(Image.PN_DISPLAY_POPUP_TITLE, true);
             properties.put(Image.PN_TITLE_VALUE_FROM_DAM, false);
             properties.put(Image.PN_ALT_VALUE_FROM_DAM, false);
+            properties.put(Image.PN_IMAGE_FROM_PAGE_IMAGE, false);
         }
 
         @Override

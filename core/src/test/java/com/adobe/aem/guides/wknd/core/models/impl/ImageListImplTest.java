@@ -158,7 +158,7 @@ class ImageListImplTest {
 
         final ValueMap actual = new ImageListImpl.SimpleImageComponentResource(imageResource, "Test alt text").getValueMap();
 
-        assertEquals(9, actual.values().size());
+        assertEquals(10, actual.values().size());
         assertEquals("/content/dam/test.png", actual.get("fileReference"));
         assertEquals("Test alt text", actual.get("alt"));
         assertEquals(false, actual.get(Image.PN_IS_DECORATIVE));
@@ -177,7 +177,7 @@ class ImageListImplTest {
 
         final ValueMap actual = new ImageListImpl.SimpleImageComponentResource(imageResource, "Test alt text").adaptTo(ValueMap.class);
 
-        assertEquals(9, actual.values().size());
+        assertEquals(10, actual.values().size());
         assertEquals("/content/dam/test.png", actual.get("fileReference"));
         assertEquals("Test alt text", actual.get("alt"));
         assertEquals(false, actual.get(Image.PN_IS_DECORATIVE));
