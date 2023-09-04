@@ -36,6 +36,8 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wknd/components/byline"
                     fileReference="/content/dam/wknd-shared/en/contributors/kumar-selvaraj.jpg"
+                    imageFromPageImage="false"
+                    isDecorative="true"
                     name="Kumar Selveraj"
                     occupations="[Photographer,Surfer]">
                     <cq:responsive jcr:primaryType="nt:unstructured">

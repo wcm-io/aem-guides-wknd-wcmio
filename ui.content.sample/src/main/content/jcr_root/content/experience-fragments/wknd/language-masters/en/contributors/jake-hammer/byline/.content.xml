@@ -36,6 +36,8 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wknd/components/byline"
                     fileReference="/content/dam/wknd-shared/en/contributors/alex-iby-343837.jpg"
+                    imageFromPageImage="false"
+                    isDecorative="true"
                     name="Jake Hammer"
                     occupations="[Influencer,Writer]">
                     <cq:responsive jcr:primaryType="nt:unstructured">

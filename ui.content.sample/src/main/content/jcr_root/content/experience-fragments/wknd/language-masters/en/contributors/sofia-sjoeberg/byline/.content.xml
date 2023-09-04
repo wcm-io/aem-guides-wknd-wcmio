@@ -36,6 +36,8 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wknd/components/byline"
                     fileReference="/content/dam/wknd-shared/en/contributors/ayo-ogunseinde-237739.jpg"
+                    imageFromPageImage="false"
+                    isDecorative="false"
                     name="Sofia Sjöberg"
                     occupations="[Photographer,Skiier,Youtuber]">
                     <cq:responsive jcr:primaryType="nt:unstructured">
