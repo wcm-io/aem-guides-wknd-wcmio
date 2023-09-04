@@ -36,8 +36,6 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wknd/components/byline"
                     fileReference="/content/dam/wknd-shared/en/contributors/ian_provo.jpg"
-                    imageFromPageImage="false"
-                    isDecorative="true"
                     name="Ian Provo"
                     occupations="Photographer">
                     <cq:responsive jcr:primaryType="nt:unstructured">
