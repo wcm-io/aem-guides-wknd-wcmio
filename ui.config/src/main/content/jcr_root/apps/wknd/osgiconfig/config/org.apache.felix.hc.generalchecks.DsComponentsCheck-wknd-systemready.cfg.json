@@ -8,9 +8,7 @@
     "com.adobe.aem.guides.wknd.core.config.impl.MediaFormatProviderImpl",
     */
     "com.adobe.aem.guides.wknd.core.config.impl.MediaHandlerConfigImpl",
-    /*
-    "io.wcm.caconfig.extensions.contextpath.impl.RootTemplateContextPathStrategy",
-    */
+    "io.wcm.caconfig.extensions.contextpath.impl.AbsoluteParentContextPathStrategy",
     "io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy",
     "io.wcm.handler.mediasource.dam.impl.dynamicmedia.DynamicMediaSupportServiceImpl",
     "io.wcm.siteapi.processor.impl.SiteApiServlet",
