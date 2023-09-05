@@ -1,0 +1,6 @@
+<template data-sly-template.headlibs="${@ page, designPath, staticDesignPath, clientLibCategories, clientLibCategoriesJsHead, hasCloudconfigSupport}"
+          data-sly-use.coreHeadlibs="/libs/core/wcm/components/page/v3/page/headlibs.html">
+    <sly data-sly-use.detector="io.wcm.siteapi.genericedit.model.GenericEditDetector" data-sly-test.genericEdit="${!detector.genericEdit}"
+        data-sly-call="${coreHeadlibs.headlibs @ page=page, designPath=designPath, staticDesignPath=staticDesignPath, clientLibCategories=clientLibCategories, clientLibCategoriesJsHead=clientLibCategoriesJsHead, hasCloudconfigSupport=hasCloudconfigSupport}"
+    />
+</template>
