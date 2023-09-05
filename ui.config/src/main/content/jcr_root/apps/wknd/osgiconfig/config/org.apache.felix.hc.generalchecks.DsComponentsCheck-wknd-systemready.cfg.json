@@ -4,9 +4,7 @@
   "statusForMissing": "TEMPORARILY_UNAVAILABLE",
   "components.list": [
     "com.adobe.aem.guides.wknd.core.config.impl.LinkHandlerConfigImpl",
-    /*
     "com.adobe.aem.guides.wknd.core.config.impl.MediaFormatProviderImpl",
-    */
     "com.adobe.aem.guides.wknd.core.config.impl.MediaHandlerConfigImpl",
     "io.wcm.caconfig.extensions.contextpath.impl.AbsoluteParentContextPathStrategy",
     "io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy",
