@@ -13,3 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
+<sly data-sly-use.detector="io.wcm.siteapi.genericedit.model.GenericEditDetector" data-sly-test.genericEdit="${detector.genericEdit}"
+    data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.js @ categories=['io.wcm.site-api.generic-edit']}"
+/>
