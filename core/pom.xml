@@ -41,25 +41,13 @@
                             <goal>bnd-process</goal>
                         </goals>
                         <configuration>
-                            <bnd><![CDATA[
-Import-Package: javax.annotation;version=0.0.0,*
-                                ]]></bnd>
+                            <bnd>
+                                Import-Package: javax.annotation;version=0.0.0,*
+
+                                <!-- All wcm.io Handler SPI implementation only get active for the resource paths of this application -->
+                                Wcmio-CAService-ContextPathRegex: ^(/content|/content/dam|/content/experience-fragments|/conf)/wknd(\-shared)?(/.*)?$
+                            </bnd>
                         </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>biz.aQute.bnd</groupId>
-                <artifactId>bnd-baseline-maven-plugin</artifactId>
-                <configuration>
-                    <failOnMissing>false</failOnMissing>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>baseline</id>
-                        <goals>
-                            <goal>baseline</goal>
-                        </goals>
                     </execution>
                 </executions>
             </plugin>

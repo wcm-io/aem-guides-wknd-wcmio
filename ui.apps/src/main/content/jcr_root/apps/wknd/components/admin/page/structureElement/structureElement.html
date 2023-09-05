@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+  <head>
+    <title>${currentPage.title}</title>
+    <style data-sly-call="${clientLib.css @ categories='coralui3'}" data-sly-unwrap/>
+    <style>
+      body { margin: 15px; }
+    </style>
+  </head>
+  <body class="coral--light">
+
+    <h1>${currentPage.title}</h1>
+
+    <ul data-sly-list.childPage="${currentPage.listChildren}">
+      <li><a href="${childPage.path}.html">${childPage.title}</a></li>
+    </ul>
+
+  </body>
+</html>
+</div>
