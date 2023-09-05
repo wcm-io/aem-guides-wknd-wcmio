@@ -7,6 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.osgi.service.component.annotations.Component;
 
+import com.adobe.aem.guides.wknd.core.config.AppTemplate;
 import com.day.cq.wcm.api.Page;
 
 import io.wcm.handler.link.markup.SimpleLinkMarkupBuilder;
@@ -20,6 +21,7 @@ import io.wcm.handler.link.type.MediaLinkType;
 import io.wcm.siteapi.genericedit.handler.link.SiteApiInternalLinkInheritGenericEditSelectorLinkPreProcessor;
 import io.wcm.siteapi.handler.link.SiteApiLinkMarkupBuilder;
 import io.wcm.siteapi.handler.link.SiteApiLinkPreProcessor;
+import io.wcm.wcm.commons.util.Template;
 
 /**
  * Link handler configuration.
@@ -57,8 +59,6 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
     return LINK_MARKUP_BUILDERS;
   }
 
-  /*
-   TODO: introduce redirect/structure element template?
   @Override
   public boolean isValidLinkTarget(@NotNull Page page) {
     return !Template.is(page, AppTemplate.ADMIN_STRUCTURE_ELEMENT);
@@ -68,7 +68,6 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
   public boolean isRedirect(@NotNull Page page) {
     return Template.is(page, AppTemplate.ADMIN_REDIRECT);
   }
-  */
 
   @Override
   public @Nullable String getLinkRootPath(@NotNull Page page, @NotNull String linkTypeId) {
