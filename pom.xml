@@ -168,6 +168,19 @@ Bundle-DocURL:
                         </properties>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>io.wcm.maven.plugins</groupId>
+                    <artifactId>wcmio-content-package-maven-plugin</artifactId>
+                    <configuration>
+                      <excludeFiles>
+                        <exclude>^META-INF/.*</exclude>
+                      </excludeFiles>
+                      <unpackDeleteDirectories>
+                        <directory>src/main/content/jcr_root</directory>
+                      </unpackDeleteDirectories>
+                      <unpackDirectory>src/main/content</unpackDirectory>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
@@ -241,6 +254,13 @@ Bundle-DocURL:
     <!-- D E P E N D E N C I E S -->
     <!-- ====================================================================== -->
     <dependencies>
+
+        <!-- Nullability annotations -->
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
         <!-- OSGi bundle and versioning annotations -->
         <dependency>
