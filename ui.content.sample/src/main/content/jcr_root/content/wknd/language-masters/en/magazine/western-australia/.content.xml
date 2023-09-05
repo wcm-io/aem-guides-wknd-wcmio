@@ -84,7 +84,7 @@
                                 jcr:lastModifiedBy="admin"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wknd/components/text"
-                                text="&lt;blockquote>&lt;b>Wanderlust&amp;nbsp;\\ˈwɒndəlʌst\\&amp;nbsp;&lt;br>&#xa; &lt;b>a strong desire to travel.&lt;/b>&lt;/b>&lt;/blockquote>&#xa;&lt;p>&lt;b>&lt;i>&lt;u>noun&lt;/u>&lt;/i>&lt;/b>&lt;/p>&#xa;"
+                                text="&lt;blockquote>&lt;strong>Wanderlust&amp;nbsp;\\ˈwɒndəlʌst\\&amp;nbsp;&lt;br>&lt;/br>&#xd;&#xa; &lt;strong>a strong desire to travel.&lt;/strong>&lt;/strong>&lt;/blockquote>&#xd;&#xa;&lt;p>&lt;strong>&lt;em>&lt;u>noun&lt;/u>&lt;/em>&lt;/strong>&lt;/p>&#xd;&#xa;"
                                 textIsRich="true"/>
                         </par1>
                         <par2
