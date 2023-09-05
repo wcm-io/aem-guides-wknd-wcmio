@@ -207,7 +207,7 @@
                         sling:resourceType="wknd/components/download"
                         actionText="Download PDF"
                         descriptionFromAsset="false"
-                        fileReference="/content/dam/wknd-shared/en/magazine/western-australia/wa-camping-adobe.pdf"
+                        fileReference="/content/dam/wknd-shared/en/magazine/western-australia/wa_camping_adobe.pdf"
                         inline="false"
                         textIsRich="true"
                         titleFromAsset="false"/>
