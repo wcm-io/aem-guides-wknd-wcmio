@@ -1,0 +1,5 @@
+{
+  "description": "wcm.io Handler Site URLs",
+  "overrides": "io.wcm.handler.url.SiteConfig={\"siteUrl\":\"<auto>\",\"siteUrlAuthor\":\"<auto>\"}",
+  "enabled": true
+}

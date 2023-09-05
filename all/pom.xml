@@ -90,6 +90,12 @@
                             <type>zip</type>
                             <target>/apps/wknd-vendor-packages/content/install</target>
                         </embedded>
+                        <!-- wcm.io Libraries -->
+                        <embedded>
+                            <groupId>io.wcm</groupId>
+                            <type>jar</type>
+                            <target>/apps/wknd-vendor-packages/application/install</target>
+                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -150,40 +156,9 @@
                     <plugin>
                         <groupId>org.apache.jackrabbit</groupId>
                         <artifactId>filevault-package-maven-plugin</artifactId>                    
-                        <extensions>true</extensions>
                         <configuration>
                             <finalName>aem-guides-wknd.all-${project.version}-classic</finalName>
-                            <group>com.adobe.aem.guides</group>
-                            <embeddeds>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd.ui.apps</artifactId>
-                                    <type>zip</type>
-                                    <target>/apps/wknd-packages/application/install</target>
-                                </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd.core</artifactId>
-                                    <target>/apps/wknd-packages/application/install</target>
-                                </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd.ui.content</artifactId>
-                                    <type>zip</type>
-                                    <target>/apps/wknd-packages/content/install</target>
-                                </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd.ui.config</artifactId>
-                                    <type>zip</type>
-                                    <target>/apps/wknd-packages/application/install</target>
-                                </embedded>
-                                <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
-                                    <type>zip</type>
-                                    <target>/apps/wknd-packages/content/install</target>
-                                </embedded>
+                            <embeddeds combine.children="append">
                                 <embedded>
                                     <groupId>com.adobe.cq</groupId>
                                     <artifactId>core.wcm.components.content</artifactId>
@@ -202,11 +177,20 @@
                                     <target>/apps/wknd-vendor-packages/application/install</target>
                                 </embedded>
                                 <embedded>
-                                    <groupId>com.adobe.aem.guides</groupId>
-                                    <artifactId>aem-guides-wknd-shared.ui.content</artifactId>
-                                    <type>zip</type>
-                                    <target>/apps/wknd-vendor-packages/content/install</target>
-                                </embedded>                           
+                                    <groupId>org.apache.sling</groupId>
+                                    <artifactId>org.apache.sling.caconfig.api</artifactId>
+                                    <target>/apps/wknd-vendor-packages/application/install</target>
+                                </embedded>
+                                <embedded>
+                                    <groupId>org.apache.sling</groupId>
+                                    <artifactId>org.apache.sling.caconfig.spi</artifactId>
+                                    <target>/apps/wknd-vendor-packages/application/install</target>
+                                </embedded>
+                                <embedded>
+                                    <groupId>org.apache.sling</groupId>
+                                    <artifactId>org.apache.sling.caconfig.impl</artifactId>
+                                    <target>/apps/wknd-vendor-packages/application/install</target>
+                                </embedded>
                             </embeddeds>
                         </configuration>
                     </plugin>
@@ -269,7 +253,7 @@
             <type>zip</type>
             <scope>provided</scope>
         </dependency>
-         <!-- Core Component Dependency (6.x only)-->
+         <!-- Core Component Dependency (6.x only) -->
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.content</artifactId>
@@ -285,6 +269,22 @@
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.core</artifactId>                
+            <scope>provided</scope>
+        </dependency>
+        <!-- Context-Aware Configuration (6.x only) -->
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.caconfig.api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.caconfig.spi</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.caconfig.impl</artifactId>
             <scope>provided</scope>
         </dependency>
         <!-- WKND Shared -->
