@@ -86,11 +86,11 @@
                     </components>
                 </wknd>
             </container>
-            <experiencefragment
+            <header
                 cq:policy="wknd/components/experiencefragment/policy_1568592468447"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/core/components/policies/mapping"/>
-            <experiencefragment_1327121818
+            <footer
                 cq:policy="wknd/components/experiencefragment/policy_1568592468447"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/core/components/policies/mapping"/>
