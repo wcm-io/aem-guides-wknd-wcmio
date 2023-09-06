@@ -1,6 +1,16 @@
 <template data-sly-template.headlibs="${@ page, designPath, staticDesignPath, clientLibCategories, clientLibCategoriesJsHead, hasCloudconfigSupport}"
           data-sly-use.coreHeadlibs="/libs/core/wcm/components/page/v3/page/headlibs.html">
-    <sly data-sly-use.detector="io.wcm.siteapi.genericedit.model.GenericEditDetector" data-sly-test.genericEdit="${!detector.genericEdit}"
+    <sly data-sly-use.detector="io.wcm.siteapi.genericedit.model.GenericEditDetector" data-sly-test.genericEdit="${detector.genericEdit}">
+        <sly data-sly-test="${!wcmmode.disabled}"
+            data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html"
+            data-sly-call="${clientlib.all @ categories = [
+                'cq.pagetypes.html5page',
+                'cq.authoring.page',
+                'cq.wcm.foundation-main',
+                'cq.shared'
+                ]}"/>
+    </sly>
+    <sly data-sly-test.genericEdit="${!genericEdit}"
         data-sly-call="${coreHeadlibs.headlibs @ page=page, designPath=designPath, staticDesignPath=staticDesignPath, clientLibCategories=clientLibCategories, clientLibCategoriesJsHead=clientLibCategoriesJsHead, hasCloudconfigSupport=hasCloudconfigSupport}"
     />
 </template>
