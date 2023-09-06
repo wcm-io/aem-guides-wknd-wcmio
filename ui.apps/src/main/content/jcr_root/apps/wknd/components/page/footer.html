@@ -1,5 +1,5 @@
 <template data-sly-template.footer="${ @ page, pwa }"
-        data-sly-use.coreFooter="/libs/core/wcm/components/page/v3/page/footer.html">
+        data-sly-use.coreFooter="core/wcm/components/page/v3/page/footer.html">
     <sly data-sly-use.detector="io.wcm.siteapi.genericedit.model.GenericEditDetector" data-sly-test.genericEdit="${detector.genericEdit}"
         data-sly-include="customfooterlibs.html"/>
     <sly data-sly-call="${coreFooter.footer @ page=page, pwa=pwa}" data-sly-test.genericEdit="${!genericEdit}"/>
