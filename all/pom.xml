@@ -213,7 +213,17 @@
                 </dependency>        
             </dependencies>
          </profile>
-    </profiles>
+        <!-- Skip building of Cloud Manager ZIP in "fast" profile -->
+        <profile>
+            <id>fast</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <aem.analyser.skip>true</aem.analyser.skip>
+            </properties>
+        </profile>
+      </profiles>
 
     <!-- ====================================================================== -->
     <!-- D E P E N D E N C I E S                                                -->
