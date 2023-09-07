@@ -9,4 +9,11 @@
         jcr:primaryType="nt:unstructured"
         clientId="28b07c6be4d544f188dc2f36e33b196b"
         reportSuiteId=""/>
+    <com.adobe.aem.guides.wknd.core.config.SampleConfig
+        jcr:primaryType="nt:unstructured"
+        stringParam="Sample String"
+        intParam="42"
+        boolParam="{Boolean}true"
+        damPath="/content/dam/wknd-shared/en/magazine/western-australia/adobestock-156407519.jpeg"
+        contentPath="/content/wknd/language-masters/en/faqs"/>
 </jcr:root>
