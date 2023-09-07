@@ -15,18 +15,20 @@
  */
 package com.adobe.aem.guides.wknd.core.models;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import com.adobe.aem.guides.wknd.core.testcontext.AppAemContext;
 import com.day.cq.wcm.api.Page;
+
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Simple JUnit test verifying the HelloWorldModel
@@ -34,13 +36,15 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @ExtendWith(AemContextExtension.class)
 class HelloWorldModelTest {
 
+    private AemContext context = AppAemContext.newAemContext();
+
     private HelloWorldModel hello;
 
     private Page page;
     private Resource resource;
 
     @BeforeEach
-    public void setup(AemContext context) throws Exception {
+    public void setup() throws Exception {
 
         // prepare a page with a test resource
         page = context.create().page("/content/mypage");

@@ -15,33 +15,38 @@
  */
 package com.adobe.aem.guides.wknd.core.models.impl;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.lenient;
+import static org.mockito.Mockito.when;
+
+import java.util.Collections;
+import java.util.List;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.factory.ModelFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.adobe.aem.guides.wknd.core.models.Byline;
+import com.adobe.aem.guides.wknd.core.testcontext.AppAemContext;
 import com.adobe.cq.wcm.core.components.models.Image;
 import com.google.common.collect.ImmutableList;
 
-import static org.mockito.Mockito.*;
-
-import java.util.Collections;
-import java.util.List;
-
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 
 @ExtendWith({AemContextExtension.class, MockitoExtension.class})
 class BylineImplTest {
-	
-	private final AemContext ctx = new AemContext();
-	
+
+    private AemContext ctx = AppAemContext.newAemContext();
+
 	@Mock
 	private Image image;
 
@@ -53,7 +58,7 @@ class BylineImplTest {
 	void setUp() throws Exception {
 		ctx.addModelsForClasses(BylineImpl.class);
 	    ctx.load().json("/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.json", "/content");
-	    
+
 	    lenient().when(modelFactory.getModelFromWrappedRequest(eq(ctx.request()),
 	    	       any(Resource.class),
 	    	       eq(Image.class))).thenReturn(image);
@@ -120,9 +125,9 @@ class BylineImplTest {
 	   @Test
 	   public void testIsEmpty_WithoutImage() {
 	       ctx.currentResource("/content/byline");
-	       
+
 	       //ModelFactory modelFactory = mock(ModelFactory.class, withSettings().lenient());
-	       
+
 	       lenient().when(modelFactory.getModelFromWrappedRequest(eq(ctx.request()),
 	           any(Resource.class),
 	           eq(Image.class))).thenReturn(null);
@@ -131,7 +136,7 @@ class BylineImplTest {
 
 	       assertTrue(byline.isEmpty());
 	   }
-	   
+
 	   @Test
 	   public void testIsEmpty_WithoutImageSrc() {
 	       ctx.currentResource("/content/byline");
@@ -142,7 +147,7 @@ class BylineImplTest {
 
 	       assertTrue(byline.isEmpty());
 	   }
-	   
+
 	   @Test
 	   public void testIsNotEmpty() {
 	    ctx.currentResource("/content/byline");
@@ -152,7 +157,7 @@ class BylineImplTest {
 
 	    assertFalse(byline.isEmpty());
 	   }
-	   
+
 	   @Test
 	   public void testGetOccupations_WithoutOccupations() {
 	       List<String> expected = Collections.emptyList();
@@ -164,7 +169,7 @@ class BylineImplTest {
 
 	       assertEquals(expected, actual);
 	   }
-	   
+
 	   @Test
 	   public void testIsEmpty_WithEmptyArrayOfOccupations() {
 	       ctx.currentResource("/content/without-occupations-empty-array");
@@ -172,6 +177,6 @@ class BylineImplTest {
 	       Byline byline = ctx.request().adaptTo(Byline.class);
 
 	       assertTrue(byline.isEmpty());
-	   } 
+	   }
 
 }
