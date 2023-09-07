@@ -11,8 +11,8 @@
 
     <!-- Force Policy and Template Updates -->
     <filter root="/conf/wknd/settings/wcm" />
-    <filter root="/conf/wknd/settings/cloudconfigs" mode="merge" />
-    <filter root="/conf/wknd/settings/cloudsettings" mode="merge" />
+    <filter root="/conf/wknd/settings/cloudconfigs"/>
+    <filter root="/conf/wknd/settings/cloudsettings"/>
 
     <!-- WKND Member Group-->
     <filter root="/home/groups/wknd" mode="merge" />

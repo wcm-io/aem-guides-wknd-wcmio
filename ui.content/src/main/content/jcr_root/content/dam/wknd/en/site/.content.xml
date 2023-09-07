@@ -6,7 +6,5 @@
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="Site"
-        sourcing="false">
-        <folderThumbnail/>
-    </jcr:content>
+        sourcing="false"/>
 </jcr:root>
