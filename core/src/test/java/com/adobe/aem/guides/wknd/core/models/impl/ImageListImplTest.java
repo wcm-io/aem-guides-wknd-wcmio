@@ -15,19 +15,30 @@
  */
 package com.adobe.aem.guides.wknd.core.models.impl;
 
-import com.adobe.aem.guides.wknd.core.models.ImageList;
-import com.adobe.cq.wcm.core.components.internal.DataLayerConfig;
-import com.adobe.cq.wcm.core.components.models.Image;
-import com.adobe.cq.wcm.core.components.models.List;
-import com.adobe.cq.wcm.core.components.models.ListItem;
-import com.adobe.cq.wcm.core.components.models.datalayer.ComponentData;
-import com.day.cq.commons.jcr.JcrConstants;
-import com.day.cq.search.PredicateGroup;
-import com.day.cq.search.Query;
-import com.day.cq.search.QueryBuilder;
-import com.day.cq.search.result.SearchResult;
-import io.wcm.testing.mock.aem.junit5.AemContext;
-import io.wcm.testing.mock.aem.junit5.AemContextExtension;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.argThat;
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.stream.Collectors;
+
+import javax.jcr.Node;
+import javax.jcr.RepositoryException;
+import javax.jcr.Session;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -41,24 +52,26 @@ import org.mockito.ArgumentMatcher;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import javax.jcr.Node;
-import javax.jcr.RepositoryException;
-import javax.jcr.Session;
-import java.lang.reflect.Field;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.stream.Collectors;
+import com.adobe.aem.guides.wknd.core.models.ImageList;
+import com.adobe.aem.guides.wknd.core.testcontext.AppAemContext;
+import com.adobe.cq.wcm.core.components.internal.DataLayerConfig;
+import com.adobe.cq.wcm.core.components.models.Image;
+import com.adobe.cq.wcm.core.components.models.List;
+import com.adobe.cq.wcm.core.components.models.ListItem;
+import com.adobe.cq.wcm.core.components.models.datalayer.ComponentData;
+import com.day.cq.commons.jcr.JcrConstants;
+import com.day.cq.search.PredicateGroup;
+import com.day.cq.search.Query;
+import com.day.cq.search.QueryBuilder;
+import com.day.cq.search.result.SearchResult;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.argThat;
-import static org.mockito.Mockito.*;
+import io.wcm.testing.mock.aem.junit5.AemContext;
+import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 
 @ExtendWith({AemContextExtension.class, MockitoExtension.class})
 class ImageListImplTest {
 
-    private final AemContext ctx = new AemContext(ResourceResolverType.JCR_MOCK);
+    private AemContext ctx = AppAemContext.newAemContextBuilder(ResourceResolverType.JCR_MOCK).build();
 
     @Mock
     private QueryBuilder mockQueryBuilder;
@@ -291,10 +304,12 @@ class ImageListImplTest {
             this.path = path;
         }
 
+        @Override
         public boolean matches(PredicateGroup predicateGroup) {
             return StringUtils.equals(path, predicateGroup.getByName("path").getParameters().get("path"));
         }
 
+        @Override
         public String toString() {
             //printed in verification errors
             return "[PredicateGroup matching path " + path + " ]";
@@ -324,6 +339,7 @@ class ImageListImplTest {
                     .collect(Collectors.toList());
         }
 
+        @Override
         public Collection<ListItem> getListItems() {
             return listItems;
         }
@@ -336,18 +352,22 @@ class ImageListImplTest {
             this.resource = resource;
         }
 
+        @Override
         public String getURL() {
             return resource.getPath() + ".html";
         }
 
+        @Override
         public String getTitle() {
             return resource.getValueMap().get("jcr:content/jcr:title", String.class);
         }
 
+        @Override
         public String getDescription() {
             return resource.getValueMap().get("jcr:content/jcr:description", String.class);
         }
 
+        @Override
         public String getPath() {
             return resource.getPath();
         }
