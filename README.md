@@ -1,11 +1,22 @@
 # AEM WKND Sites Project with wcm.io
 
+## Overview
+
+This is a fork of the [Adobe AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd) enhanced with various wcm.io features. It demonstrates the usage of:
+
+* [wcm.io WCM Core Components](https://wcm.io/wcm/core-components/)
+* [wcm.io Handler Infrastructure](https://wcm.io/handler/)
+* [wcm.io Site API](https://wcm.io/site-api/)
+
+
 ## Adobe Experience Manager compatibility
 
 WKND versions are compatible with the following versions of Adobe Experience Manager:
 
 * AEM as a Cloud Service
-* AEM 6.5 SP17
+* AEM 6.5 SP17 *)
+
+*) The Site API Filtering Content Processor is currently not compatible with AEM 6.5, it required Sling Engine 2.11 or higher.
 
 ## How to use/install
 
@@ -73,3 +84,4 @@ With Adobe Stock, you have access to more than 140 million high-quality, royalty
 
 * This project was generated using the [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 * This project relies on [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
+* The project relies on various [wcm.io](https://wcm.io) features
