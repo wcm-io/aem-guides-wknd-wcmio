@@ -6,8 +6,6 @@
     <jcr:content
         cq:conf="/conf/wknd"
         jcr:primaryType="nt:unstructured"
-        jcr:title="WKND Site">
-        <folderThumbnail/>
-    </jcr:content>
+        jcr:title="WKND Site"/>
     <en/>
 </jcr:root>
