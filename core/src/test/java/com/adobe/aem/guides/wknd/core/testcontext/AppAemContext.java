@@ -20,6 +20,8 @@ import org.jetbrains.annotations.NotNull;
 import com.adobe.aem.guides.wknd.core.config.impl.LinkHandlerConfigImpl;
 import com.adobe.aem.guides.wknd.core.config.impl.MediaFormatProviderImpl;
 import com.adobe.aem.guides.wknd.core.config.impl.MediaHandlerConfigImpl;
+import com.adobe.aem.guides.wknd.core.reference.impl.LinkReferenceDecorator;
+import com.adobe.aem.guides.wknd.core.reference.impl.MediaReferenceDecorator;
 
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextBuilder;
@@ -74,6 +76,10 @@ public final class AppAemContext {
       context.registerInjectActivateService(LinkHandlerConfigImpl.class);
       context.registerInjectActivateService(MediaHandlerConfigImpl.class);
       context.registerInjectActivateService(MediaFormatProviderImpl.class);
+
+      // Site API
+      context.registerInjectActivateService(LinkReferenceDecorator.class);
+      context.registerInjectActivateService(MediaReferenceDecorator.class);
 
     }
   };
