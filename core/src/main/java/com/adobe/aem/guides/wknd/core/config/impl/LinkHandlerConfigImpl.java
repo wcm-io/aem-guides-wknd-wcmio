@@ -19,7 +19,6 @@ import io.wcm.handler.link.type.ExternalLinkType;
 import io.wcm.handler.link.type.InternalLinkType;
 import io.wcm.handler.link.type.MediaLinkType;
 import io.wcm.siteapi.genericedit.handler.link.SiteApiInternalLinkInheritGenericEditSelectorLinkPreProcessor;
-import io.wcm.siteapi.handler.link.SiteApiLinkMarkupBuilder;
 import io.wcm.siteapi.handler.link.SiteApiLinkPreProcessor;
 import io.wcm.wcm.commons.util.Template;
 
@@ -38,7 +37,9 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
       SiteApiLinkPreProcessor.class, SiteApiInternalLinkInheritGenericEditSelectorLinkPreProcessor.class);
 
   private static final List<Class<? extends LinkMarkupBuilder>> LINK_MARKUP_BUILDERS = List.of(
-      SiteApiLinkMarkupBuilder.class,
+      // Do not enable as we are using Core Component Link (via LinkWrapper) as decoration which
+      // exports the anchor HTML attributes to JSON - this would lead to a recursion
+      // DISABLED: SiteApiLinkMarkupBuilder.class,
       SimpleLinkMarkupBuilder.class);
 
   @Override

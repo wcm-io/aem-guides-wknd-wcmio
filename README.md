@@ -16,7 +16,7 @@ WKND versions are compatible with the following versions of Adobe Experience Man
 * AEM as a Cloud Service
 * AEM 6.5 SP17 *)
 
-*) The Site API Filtering Content Processor is currently not compatible with AEM 6.5, it required Sling Engine 2.11 or higher.
+*) The Site API Filtering Content Processor is currently not compatible with AEM 6.5, it required Sling Engine 2.11 or higher. The default Content Processor is used in AEM 6.5 als fallback.
 
 ## How to use/install
 

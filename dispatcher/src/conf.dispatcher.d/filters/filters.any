@@ -36,3 +36,6 @@ $include "./default_filters.any"
 # ContextHub
 /0200 { /type "allow" /url "*/contexthub.pagedata.json" }
 /0201 { /type "allow" /url "/home/users/*.infinity.json" }
+
+# Allow Site API JSON
+/0300 { /type "allow" /extension "api" /selectors "site" /path "/content/*" }

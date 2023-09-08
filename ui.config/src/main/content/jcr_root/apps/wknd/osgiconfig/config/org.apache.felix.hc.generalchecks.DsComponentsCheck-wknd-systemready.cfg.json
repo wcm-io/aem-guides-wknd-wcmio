@@ -10,9 +10,7 @@
     "io.wcm.caconfig.extensions.persistence.impl.PagePersistenceStrategy",
     "io.wcm.handler.mediasource.dam.impl.dynamicmedia.DynamicMediaSupportServiceImpl",
     "io.wcm.siteapi.processor.impl.SiteApiServlet",
-    /*
     "io.wcm.siteapi.processor.caconfig.impl.ContextAwareConfigurationExportImpl",
-    */
     "io.wcm.siteapi.handler.url.impl.HandlerUrlBuilder"
   ]
 }
