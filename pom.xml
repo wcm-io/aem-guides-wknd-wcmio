@@ -118,20 +118,9 @@
                                 <goal>bnd-process</goal>
                             </goals>
                             <configuration>
-                                <bnd><![CDATA[
-Bundle-Category: ${componentGroupName}
-
-# export all versioned packages except for conditional ones (https://github.com/bndtools/bnd/issues/3721#issuecomment-579026778)
--exportcontents: ${removeall;${packages;VERSIONED};${packages;CONDITIONAL}}
-
-# reproducible builds (https://github.com/bndtools/bnd/issues/3521)
--noextraheaders: true
--snapshot: SNAPSHOT
-
-Bundle-DocURL:
--plugin org.apache.sling.caconfig.bndplugin.ConfigurationClassScannerPlugin
--plugin org.apache.sling.bnd.models.ModelsScannerPlugin
-                                ]]></bnd>
+                                <bnd>
+                                    Bundle-Category: ${componentGroupName}
+                                </bnd>
                             </configuration>
                         </execution>
                     </executions>
