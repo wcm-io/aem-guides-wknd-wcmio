@@ -14,6 +14,6 @@
         stringParam="Sample String"
         intParam="42"
         boolParam="{Boolean}true"
-        damPath="/content/dam/wknd-shared/en/magazine/western-australia/adobestock-156407519.jpeg"
-        contentPath="/content/wknd/language-masters/en/faqs"/>
+        assetRef="/content/dam/wknd-shared/en/magazine/western-australia/adobestock-156407519.jpeg"
+        contentRef="/content/wknd/language-masters/en/faqs"/>
 </jcr:root>

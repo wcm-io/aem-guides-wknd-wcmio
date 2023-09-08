@@ -4,6 +4,8 @@ import static io.wcm.caconfig.editor.EditorProperties.PROPERTY_PATHBROWSER_ROOT_
 import static io.wcm.caconfig.editor.EditorProperties.PROPERTY_PATHBROWSER_ROOT_PATH_CONTEXT;
 import static io.wcm.caconfig.editor.EditorProperties.PROPERTY_WIDGET_TYPE;
 import static io.wcm.caconfig.editor.EditorProperties.WIDGET_TYPE_PATHBROWSER;
+import static io.wcm.handler.media.MediaNameConstants.PN_COMPONENT_MEDIA_AUTOCROP;
+import static io.wcm.handler.media.MediaNameConstants.PN_COMPONENT_MEDIA_FORMATS_MANDATORY_NAMES;
 
 import org.apache.sling.caconfig.annotation.Configuration;
 import org.apache.sling.caconfig.annotation.Property;
@@ -38,9 +40,11 @@ public @interface SampleConfig {
    */
   @Property(label = "DAM Path", description = "Browse DAM assets.", order = 20, property = {
       PROPERTY_WIDGET_TYPE + "=" + WIDGET_TYPE_PATHBROWSER,
-      PROPERTY_PATHBROWSER_ROOT_PATH + "=/content/dam"
+      PROPERTY_PATHBROWSER_ROOT_PATH + "=/content/dam",
+      PN_COMPONENT_MEDIA_FORMATS_MANDATORY_NAMES + "=landscape,extra_wide,square",
+      PN_COMPONENT_MEDIA_AUTOCROP + "=true"
   })
-  String damPath();
+  String assetRef();
 
   /**
    * @return Path parameter
@@ -50,6 +54,6 @@ public @interface SampleConfig {
           PROPERTY_WIDGET_TYPE + "=" + WIDGET_TYPE_PATHBROWSER,
           PROPERTY_PATHBROWSER_ROOT_PATH_CONTEXT + "=true"
       })
-  String contentPath();
+  String contentRef();
 
 }
