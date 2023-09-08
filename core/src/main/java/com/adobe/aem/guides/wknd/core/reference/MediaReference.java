@@ -1,6 +1,7 @@
 package com.adobe.aem.guides.wknd.core.reference;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.stream.Collectors;
 
 import org.jetbrains.annotations.NotNull;
@@ -36,7 +37,7 @@ public class MediaReference {
    * @return Renditions
    */
   public Collection<MediaRendition> getRenditions() {
-    return renditions;
+    return Collections.unmodifiableCollection(renditions);
   }
 
 }
