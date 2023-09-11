@@ -21,8 +21,8 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.adobe.aem.guides</groupId>
-        <artifactId>aem-guides-wknd</artifactId>
+        <groupId>io.wcm.samples.wknd</groupId>
+        <artifactId>aem-guides-wknd-wcmio</artifactId>
         <version>3.2.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -30,9 +30,9 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>aem-guides-wknd.ui.content</artifactId>
+    <artifactId>aem-guides-wknd-wcmio.ui.content</artifactId>
     <packaging>content-package</packaging>
-    <name>WKND Sites Project - UI content</name>
+    <name>WKND Sites Project wcm.io - UI content</name>
     <description>UI content package for WKND Sites Project</description>
 
     <!-- ====================================================================== -->
@@ -50,8 +50,8 @@
                     <properties>
                         <cloudManagerTarget>none</cloudManagerTarget>
                     </properties>
-                    <group>com.adobe.aem.guides</group>
-                    <name>aem-guides-wknd.ui.content</name>
+                    <group>io.wcm.samples.wknd</group>
+                    <name>aem-guides-wknd-wcmio.ui.content</name>
                     <packageType>content</packageType>
                     <accessControlHandling>merge</accessControlHandling>
                     <validatorsSettings>
@@ -67,8 +67,8 @@
                     </validatorsSettings>
                     <dependencies>
                         <dependency>
-                            <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>aem-guides-wknd.ui.apps</artifactId>
+                            <groupId>io.wcm.samples.wknd</groupId>
+                            <artifactId>aem-guides-wknd-wcmio.ui.apps</artifactId>
                         </dependency>
                         <dependency>
                             <groupId>com.adobe.aem.guides</groupId>
@@ -85,14 +85,14 @@
     <!-- ====================================================================== -->
     <dependencies>
         <dependency>
-            <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.core</artifactId>
+            <groupId>io.wcm.samples.wknd</groupId>
+            <artifactId>aem-guides-wknd-wcmio.core</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.ui.apps</artifactId>
+            <groupId>io.wcm.samples.wknd</groupId>
+            <artifactId>aem-guides-wknd-wcmio.ui.apps</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
             <scope>provided</scope>

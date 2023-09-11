@@ -20,8 +20,8 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.adobe.aem.guides</groupId>
-        <artifactId>aem-guides-wknd</artifactId>
+        <groupId>io.wcm.samples.wknd</groupId>
+        <artifactId>aem-guides-wknd-wcmio</artifactId>
         <version>3.2.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -29,9 +29,9 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>aem-guides-wknd.all</artifactId>
+    <artifactId>aem-guides-wknd-wcmio.all</artifactId>
     <packaging>content-package</packaging>
-    <name>WKND Sites Project - All</name>
+    <name>WKND Sites Project wcm.io - All</name>
     <description>All content package for WKND Sites Project</description>
 
     <!-- ====================================================================== -->
@@ -47,7 +47,7 @@
                 <artifactId>filevault-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <group>com.adobe.aem.guides</group>
+                    <group>io.wcm.samples.wknd</group>
                     <packageType>container</packageType>
                     <properties>
                         <cloudManagerTarget>all</cloudManagerTarget>
@@ -56,31 +56,31 @@
                     <skipSubPackageValidation>true</skipSubPackageValidation>
                     <embeddeds>
                         <embedded>
-                            <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>aem-guides-wknd.ui.apps</artifactId>
+                            <groupId>io.wcm.samples.wknd</groupId>
+                            <artifactId>aem-guides-wknd-wcmio.ui.apps</artifactId>
                             <type>zip</type>
                             <target>/apps/wknd-packages/application/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>aem-guides-wknd.core</artifactId>
+                            <groupId>io.wcm.samples.wknd</groupId>
+                            <artifactId>aem-guides-wknd-wcmio.core</artifactId>
                             <target>/apps/wknd-packages/application/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>aem-guides-wknd.ui.content</artifactId>
+                            <groupId>io.wcm.samples.wknd</groupId>
+                            <artifactId>aem-guides-wknd-wcmio.ui.content</artifactId>
                             <type>zip</type>
                             <target>/apps/wknd-packages/content/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>aem-guides-wknd.ui.config</artifactId>
+                            <groupId>io.wcm.samples.wknd</groupId>
+                            <artifactId>aem-guides-wknd-wcmio.ui.config</artifactId>
                             <type>zip</type>
                             <target>/apps/wknd-packages/application/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
+                            <groupId>io.wcm.samples.wknd</groupId>
+                            <artifactId>aem-guides-wknd-wcmio.ui.content.sample</artifactId>
                             <type>zip</type>
                             <target>/apps/wknd-packages/content/install</target>
                         </embedded>
@@ -157,7 +157,7 @@
                         <groupId>org.apache.jackrabbit</groupId>
                         <artifactId>filevault-package-maven-plugin</artifactId>                    
                         <configuration>
-                            <finalName>aem-guides-wknd.all-${project.version}-classic</finalName>
+                            <finalName>aem-guides-wknd-wcmio.all-${project.version}-classic</finalName>
                             <embeddeds combine.children="append">
                                 <embedded>
                                     <groupId>com.adobe.cq</groupId>
@@ -198,7 +198,7 @@
                         <groupId>io.wcm.maven.plugins</groupId>
                         <artifactId>wcmio-content-package-maven-plugin</artifactId>
                         <configuration>
-                            <packageFile>${project.build.directory}/aem-guides-wknd.all-${project.version}-classic.zip</packageFile>
+                            <packageFile>${project.build.directory}/aem-guides-wknd-wcmio.all-${project.version}-classic.zip</packageFile>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -230,35 +230,35 @@
     <!-- ====================================================================== -->
     <dependencies>
         <dependency>
-            <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.core</artifactId>
+            <groupId>io.wcm.samples.wknd</groupId>
+            <artifactId>aem-guides-wknd-wcmio.core</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.ui.apps</artifactId>
-            <version>${project.version}</version>
-            <type>zip</type>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.ui.content</artifactId>
+            <groupId>io.wcm.samples.wknd</groupId>
+            <artifactId>aem-guides-wknd-wcmio.ui.apps</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.ui.config</artifactId>
+            <groupId>io.wcm.samples.wknd</groupId>
+            <artifactId>aem-guides-wknd-wcmio.ui.content</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.ui.content.sample</artifactId>
+            <groupId>io.wcm.samples.wknd</groupId>
+            <artifactId>aem-guides-wknd-wcmio.ui.config</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm.samples.wknd</groupId>
+            <artifactId>aem-guides-wknd-wcmio.ui.content.sample</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
             <scope>provided</scope>

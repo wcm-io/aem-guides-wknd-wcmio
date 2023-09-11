@@ -22,14 +22,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.adobe.aem.guides</groupId>
-        <artifactId>aem-guides-wknd</artifactId>
+        <groupId>io.wcm.samples.wknd</groupId>
+        <artifactId>aem-guides-wknd-wcmio</artifactId>
         <version>3.2.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>aem-guides-wknd.ui.tests</artifactId>
-    <name>WKND Sites Project - UI Tests</name>
+    <artifactId>aem-guides-wknd-wcmio.ui.tests</artifactId>
+    <name>WKND Sites Project wcm.io - UI Tests</name>
     <description>UI Tests for WKND Sites Project</description>
     <packaging>pom</packaging>
    

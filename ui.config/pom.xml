@@ -21,8 +21,8 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.adobe.aem.guides</groupId>
-        <artifactId>aem-guides-wknd</artifactId>
+        <groupId>io.wcm.samples.wknd</groupId>
+        <artifactId>aem-guides-wknd-wcmio</artifactId>
         <version>3.2.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -30,9 +30,9 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>aem-guides-wknd.ui.config</artifactId>
+    <artifactId>aem-guides-wknd-wcmio.ui.config</artifactId>
     <packaging>content-package</packaging>
-    <name>WKND Sites Project - UI config</name>
+    <name>WKND Sites Project wcm.io - UI config</name>
     <description>UI config package for WKND Site</description>
 
     <properties>
@@ -58,8 +58,8 @@
                     <showImportPackageReport>false</showImportPackageReport>
                     <repositoryStructurePackages>
                         <repositoryStructurePackage>
-                            <groupId>com.adobe.aem.guides</groupId>
-                            <artifactId>aem-guides-wknd.ui.apps.structure</artifactId>
+                            <groupId>io.wcm.samples.wknd</groupId>
+                            <artifactId>aem-guides-wknd-wcmio.ui.apps.structure</artifactId>
                         </repositoryStructurePackage>
                     </repositoryStructurePackages>
                 </configuration>
@@ -69,8 +69,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.adobe.aem.guides</groupId>
-            <artifactId>aem-guides-wknd.ui.apps.structure</artifactId>
+            <groupId>io.wcm.samples.wknd</groupId>
+            <artifactId>aem-guides-wknd-wcmio.ui.apps.structure</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
             <scope>provided</scope>
