@@ -74,8 +74,12 @@
             <organizationUrl>https://www.adobe.com</organizationUrl>
             <url>https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html</url>
         </developer>
+        <developer>
+            <name>wcm.io Community</name>
+            <organization>wcm.io</organization>
+            <organizationUrl>https://wcm.io</organizationUrl>
+        </developer>
     </developers>
-
      <scm>
         <connection>scm:git:https://github.com/wcm-io/aem-guides-wknd-wcmio.git</connection>
         <developerConnection>scm:git:https://github.com/wcm-io/aem-guides-wknd-wcmio.git</developerConnection>
