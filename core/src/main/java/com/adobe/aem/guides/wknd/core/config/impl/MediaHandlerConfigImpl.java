@@ -41,4 +41,9 @@ public class MediaHandlerConfigImpl extends MediaHandlerConfig {
     return DAM_ROOT;
   }
 
+  @Override
+  public boolean includeAssetWebRenditionsByDefault() {
+    return false;
+  }
+
 }
