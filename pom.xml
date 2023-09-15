@@ -60,6 +60,12 @@
         <core.wcm.components.version>2.23.2</core.wcm.components.version>
         <wknd-shared.version>3.1.0</wknd-shared.version>
         <wknd-shared.65.version>2.2.2</wknd-shared.65.version>
+
+        <!-- deploy to local target directory -->
+        <distribution.snapshotRepositoryId>local-directory</distribution.snapshotRepositoryId>
+        <distribution.snapshotRepositoryUrl>file:///temp/deploy-snapshot</distribution.snapshotRepositoryUrl>
+        <distribution.releaseRepositoryId>local-directory</distribution.releaseRepositoryId>
+        <distribution.releaseRepositoryUrl>file:///temp/deploy-release</distribution.releaseRepositoryUrl>
     </properties>
 
     <organization>
@@ -173,6 +179,20 @@
                       </unpackDeleteDirectories>
                       <unpackDirectory>src/main/content</unpackDirectory>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <configuration>
+                      <projectVersionPolicyId>OddEvenVersionPolicy</projectVersionPolicyId>
+                    </configuration>
+                    <dependencies>
+                      <dependency>
+                        <groupId>org.apache.maven.release</groupId>
+                        <artifactId>maven-release-oddeven-policy</artifactId>
+                        <version>${maven-release-plugin.version}</version>
+                      </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
