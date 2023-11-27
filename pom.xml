@@ -429,26 +429,6 @@
                 <artifactId>io.wcm.wcm.core.components</artifactId>
                 <version>1.14.0-2.23.2</version>
             </dependency>
-            <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.site-api.processor</artifactId>
-                <version>1.1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.site-api.handler</artifactId>
-                <version>1.1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.site-api.generic-edit</artifactId>
-                <version>1.0.2</version>
-            </dependency>
-            <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.site-api.generic-edit.handler</artifactId>
-                <version>1.0.0</version>
-            </dependency>
 
             <!-- Testing -->
             <dependency>
@@ -505,39 +485,9 @@
             </dependency>
             <dependency>
                 <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.testing.wcm-io-mock.site-api.processor</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-            <dependency>
-                <groupId>io.wcm</groupId>
                 <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
                 <version>1.4.0</version>
             </dependency>
-            <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.testing.wcm-io-mock.site-api.handler</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-            <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.site-api.openapi-validator</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-            <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.site-api.integration-test-support</artifactId>
-                <version>1.0.0</version>
-            </dependency> 
-            <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.testing.wcm-io-mock.site-api.generic-edit</artifactId>
-                <version>1.0.0</version>
-            </dependency> 
-            <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.testing.wcm-io-mock.site-api.generic-edit.handler</artifactId>
-                <version>1.0.0</version>
-            </dependency> 
 
         </dependencies>
     </dependencyManagement>

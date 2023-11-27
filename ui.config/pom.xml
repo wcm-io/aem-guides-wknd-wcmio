@@ -35,11 +35,6 @@
     <name>WKND Sites Project wcm.io - UI config</name>
     <description>UI config package for WKND Site</description>
 
-    <properties>
-        <!-- Exclude configuration for Content Processor by default - it is used only for AEM 6.5. On AEMaaCS Filtering Content Processor is used -->
-        <vault.excludes>**/io.wcm.siteapi.processor.impl.content.ContentProcessor.cfg.json</vault.excludes>
-    </properties>
-
     <!-- ====================================================================== -->
     <!-- B U I L D   D E F I N I T I O N                                        -->
     <!-- ====================================================================== -->
@@ -76,22 +71,5 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <!-- ====================================================================== -->
-    <!-- P R O F I L E S                                                        -->
-    <!-- ====================================================================== -->
-    <profiles>
-        <!-- AEM 6.x Profile to include Core Components-->
-        <profile>
-            <id>classic</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <!-- Exclude configuration for Filtering Content Processor - its not supported on AEM 6.5 (requires Sling Engine 2.11+) -->
-                <vault.excludes>**/io.wcm.siteapi.processor.impl.content.FilteringContentProcessor-*.cfg.json</vault.excludes>
-            </properties>
-        </profile>
-    </profiles>
 
 </project>

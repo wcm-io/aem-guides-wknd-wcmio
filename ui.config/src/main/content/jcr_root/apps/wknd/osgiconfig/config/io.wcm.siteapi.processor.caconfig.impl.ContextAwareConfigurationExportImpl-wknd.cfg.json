@@ -1,7 +1,0 @@
-{
-  "names": [
-    "com.adobe.cq.wcm.core.components.internal.DataLayerConfig",
-    "com.adobe.cq.wcm.core.components.internal.services.pdfviewer.PdfViewerCaConfig",
-    "com.adobe.aem.guides.wknd.core.config.SampleConfig"
-  ]
-}
