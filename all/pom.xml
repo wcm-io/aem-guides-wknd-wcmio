@@ -149,7 +149,7 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <wknd-shared.version>${wknd-shared.65.version}</wknd-shared.version>
+                <wknd-shared.version>3.1.0</wknd-shared.version>
             </properties>
             <build>
                 <plugins>
