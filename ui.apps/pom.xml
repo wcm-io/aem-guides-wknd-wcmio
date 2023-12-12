@@ -127,13 +127,11 @@
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.scripting.sightly.compiler</artifactId>
-            <version>1.2.4-1.4.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.scripting.sightly.runtime</artifactId>
-            <version>1.2.4-1.4.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
