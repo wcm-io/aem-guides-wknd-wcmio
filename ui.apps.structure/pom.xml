@@ -8,7 +8,7 @@
     <parent>
         <groupId>io.wcm.samples.wknd</groupId>
         <artifactId>aem-guides-wknd-wcmio</artifactId>
-        <version>3.2.3-SNAPSHOT</version>
+        <version>3.2.4</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
