@@ -26,9 +26,9 @@ if [[ $0 == *":\\"* ]]; then
 fi
 
 # install AEM 6.5 with service pack
-mvn --non-recursive wcmio-content-package:install \
-    --activate-profiles=${MAVEN_PROFILES} \
-    -Dvault.artifact=adobe.binary.aem.65.servicepack:aem-service-pkg:zip:6.5.18.0 \
-    -Dvault.delayAfterInstallSec=30
+#mvn --non-recursive wcmio-content-package:install \
+#    --activate-profiles=${MAVEN_PROFILES} \
+#    -Dvault.artifact=adobe.binary.aem.65.servicepack:aem-service-pkg:zip:6.5.18.0 \
+#    -Dvault.delayAfterInstallSec=30
 
 ./build-deploy.sh --maven.profiles=${MAVEN_PROFILES} --display.pause.message=${DISPLAY_PAUSE_MESSAGE} "$@"
