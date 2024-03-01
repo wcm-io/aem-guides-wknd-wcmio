@@ -60,7 +60,7 @@
         <core.wcm.components.version>2.23.4</core.wcm.components.version>
         <wknd-shared.version>3.1.0</wknd-shared.version>
         <wknd-shared.65.version>2.2.2</wknd-shared.65.version>
-        <mockito.version>5.10.0</mockito.version>
+        <mockito.version>5.11.0</mockito.version>
 
         <!-- deploy to local target directory -->
         <distribution.snapshotRepositoryId>local-directory</distribution.snapshotRepositoryId>
