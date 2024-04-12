@@ -57,7 +57,7 @@
     <properties>
         <aem.sdk.api>2024.2.15262.20240224T002940Z-231200</aem.sdk.api>
         <componentGroupName>WKND Site</componentGroupName>
-        <core.wcm.components.version>2.23.4</core.wcm.components.version>
+        <core.wcm.components.version>2.24.6</core.wcm.components.version>
         <wknd-shared.version>3.1.0</wknd-shared.version>
         <wknd-shared.65.version>2.2.2</wknd-shared.65.version>
         <mockito.version>5.11.0</mockito.version>
