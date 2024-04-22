@@ -55,7 +55,7 @@
     </modules>
 
     <properties>
-        <aem.sdk.api>2024.2.15262.20240224T002940Z-231200</aem.sdk.api>
+        <aem.sdk.api>2024.4.15977.20240418T174835Z-240300</aem.sdk.api>
         <componentGroupName>WKND Site</componentGroupName>
         <core.wcm.components.version>2.23.4</core.wcm.components.version>
         <wknd-shared.version>3.1.0</wknd-shared.version>
