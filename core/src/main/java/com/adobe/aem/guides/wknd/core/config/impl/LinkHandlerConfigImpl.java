@@ -1,5 +1,7 @@
 package com.adobe.aem.guides.wknd.core.config.impl;
 
+import static com.day.cq.wcm.api.NameConstants.PN_REDIRECT_TARGET;
+
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
@@ -41,7 +43,8 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
 
   @Override
   public boolean isRedirect(@NotNull Page page) {
-    return Template.is(page, AppTemplate.ADMIN_REDIRECT);
+    return Template.is(page, AppTemplate.ADMIN_REDIRECT)
+        || StringUtils.isNotBlank(page.getProperties().get(PN_REDIRECT_TARGET, String.class));
   }
 
   @Override
