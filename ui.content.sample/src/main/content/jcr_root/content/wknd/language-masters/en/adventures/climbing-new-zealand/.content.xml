@@ -54,7 +54,7 @@
                         alt="climber hanging sideways"
                         altValueFromDAM="false"
                         displayPopupTitle="false"
-                        fileReference="/content/dam/wknd-shared/en/activities/climbing/sport-climbing.jpg"
+                        fileReference="/content/dam/wknd/smart-crop/sport-climbing.jpg"
                         imageCrop="0,0,1271,579"
                         isDecorative="false"
                         titleValueFromDAM="false"/>
@@ -65,7 +65,7 @@
                         sling:resourceType="wknd/components/responsiveimage"
                         altValueFromDAM="true"
                         displayPopupTitle="true"
-                        fileReference="/content/dam/wknd-shared/en/activities/climbing/climber-gear-rope.jpg"
+                        fileReference="/content/dam/wknd/smart-crop/climber-gear-rope.jpg"
                         isDecorative="false"
                         titleValueFromDAM="true"/>
                     <item_1572024817401
@@ -75,7 +75,7 @@
                         sling:resourceType="wknd/components/responsiveimage"
                         altValueFromDAM="true"
                         displayPopupTitle="true"
-                        fileReference="/content/dam/wknd-shared/en/adventures/climbing-new-zealand/adobestock-277768563.jpeg"
+                        fileReference="/content/dam/wknd/smart-crop/adobestock-277768563.jpg"
                         isDecorative="false"
                         titleValueFromDAM="true"/>
                 </carousel>
