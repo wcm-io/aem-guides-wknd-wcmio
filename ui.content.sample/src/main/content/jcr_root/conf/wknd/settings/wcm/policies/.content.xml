@@ -1109,6 +1109,55 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy_1594238204926>
             </tabs>
+            <responsiveimage jcr:primaryType="nt:unstructured">
+                <policy_1728316361250
+                    jcr:lastModified="{Date}2024-10-07T17:55:25.701+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="WKND Responsive Image"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    wcmio:mediaCropAuto="{Boolean}true"
+                    wcmio:mediaFormats="[landscape,extra_wide,square]"
+                    wcmio:mediaResponsiveType="pictureSources"
+                    allowUpload="true"
+                    altValueFromDAM="true"
+                    displayPopupTitle="true"
+                    isDecorative="false"
+                    titleValueFromDAM="true"
+                    uuidDisabled="true">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <wcmio:mediaResponsiveImageSizes jcr:primaryType="nt:unstructured"/>
+                    <plugins jcr:primaryType="nt:unstructured">
+                        <rotate
+                            jcr:primaryType="nt:unstructured"
+                            features="right"/>
+                        <flip
+                            jcr:primaryType="nt:unstructured"
+                            features="-"/>
+                        <crop
+                            jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                    </plugins>
+                    <wcmio:mediaResponsivePictureSources jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            media="(min-width: 1536px)"
+                            mediaFormat="extra_wide"
+                            sizes="100vw"
+                            widths="1024,2048?"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            media="(min-width: 1024px)"
+                            mediaFormat="landscape"
+                            sizes="100vw"
+                            widths="1024,2048?"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            mediaFormat="square"
+                            widths="400,800"/>
+                    </wcmio:mediaResponsivePictureSources>
+                </policy_1728316361250>
+            </responsiveimage>
         </components>
     </wknd>
     <cq jcr:primaryType="nt:unstructured">
