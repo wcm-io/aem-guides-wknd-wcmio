@@ -1,0 +1,5 @@
+{
+  "enabledRemoteAssets": "$[env:WCMIO_DM_OPENAPI_REMOTE_ASSETS;default=false]",
+  "enabledLocalAssets": "$[env:WCMIO_DM_OPENAPI_LOCAL_ASSETS;default=false]",
+  "localAssetsRepositoryId": "$[env:LOCAL_ASSET_DELIVERY_REPOSITORY_ID;default=]"
+}
