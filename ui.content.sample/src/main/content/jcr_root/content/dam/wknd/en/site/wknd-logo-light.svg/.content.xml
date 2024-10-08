@@ -12,6 +12,7 @@
             dam:extracted="{Date}2020-07-10T13:28:52.907-07:00"
             dam:sha1="4ed74273654c21b4546b3d420ab58d4a9b14b4cd"
             dam:size="{Long}3028"
+            dam:status="approved"
             dc:format="image/svg+xml"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="3b6ac164-95f1-4d98-8222-3375797f5916">
+    <jcr:content
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2024-10-07T18:25:35.676+02:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2024-10-07T18:25:35.458+02:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}300"
+            dam:Physicalheightininches="{Decimal}3.5999999046325684"
+            dam:Physicalwidthindpi="{Long}300"
+            dam:Physicalwidthininches="{Decimal}5.400000095367432"
+            dam:Progressive="no"
+            dam:sha1="ed004b70c981f87c11445a236c581626e02c61cc"
+            dam:size="{Long}347503"
+            dam:status="approved"
+            dc:description="Climber woman wearing in safety harness with equipment holding rope and preparing to climb"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2016-03-12T12:13:35.183+01:00"
+            dc:title="Climber Gear Rope"
+            exif:ColorSpace="{Long}65535"
+            exif:ExifVersion="0221"
+            exif:PixelXDimension="{Long}2880"
+            exif:PixelYDimension="{Long}1920"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Climber Gear Rope"
+            photoshop:ColorMode="{Long}3"
+            tiff:BitsPerSample="{Long}[8,8,8]"
+            tiff:BitsPerSample_xmpArrayType="rdf:Seq"
+            tiff:ImageLength="{Long}1080"
+            tiff:ImageWidth="{Long}1620"
+            tiff:Orientation="{Long}1"
+            tiff:PhotometricInterpretation="{Long}2"
+            tiff:ResolutionUnit="{Long}2"
+            tiff:SamplesPerPixel="{Long}3"
+            tiff:XResolution="300/1"
+            tiff:YResolution="300/1"
+            xmp:CreateDate="{Date}2016-02-10T12:01:56.000+01:00"
+            xmp:CreatorTool="Adobe Photoshop CC 2015 (Macintosh)"
+            xmp:MetadataDate="{Date}2016-03-08T23:49:42.000+01:00"
+            xmpMM:DocumentID="adobe:docid:photoshop:797509b8-260e-1179-a410-b2db021fd2b8"
+            xmpMM:InstanceID="xmp.iid:6a67d9e6-3a9a-4e87-a142-2cb7a15f97fc"
+            xmpMM:OriginalDocumentID="1863E7B541D7AC3C4194F06111944B82"
+            xmp:ModifyDate="{Date}2016-03-08T23:49:42.000+01:00"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditionsMetadata jcr:primaryType="nt:unstructured">
+            <cq5dam.thumbnail.48.48.png
+                jcr:lastModified="{Date}2024-10-07T18:25:35.590+02:00"
+                jcr:lastModifiedBy="dam-writer-service"
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}31"
+                imageWidth="{Long}48"/>
+            <cq5dam.thumbnail.140.100.png
+                jcr:lastModified="{Date}2024-10-07T18:25:35.602+02:00"
+                jcr:lastModifiedBy="dam-writer-service"
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}93"
+                imageWidth="{Long}140"/>
+            <cq5dam.thumbnail.319.319.png
+                jcr:lastModified="{Date}2024-10-07T18:25:35.612+02:00"
+                jcr:lastModifiedBy="dam-writer-service"
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}212"
+                imageWidth="{Long}319"/>
+            <cq5dam.web.1280.1280.jpeg
+                jcr:lastModified="{Date}2024-10-07T18:25:35.680+02:00"
+                jcr:lastModifiedBy="dam-writer-service"
+                jcr:primaryType="nt:unstructured"
+                imageHeight="{Long}853"
+                imageWidth="{Long}1280"/>
+        </renditionsMetadata>
+    </jcr:content>
+</jcr:root>

@@ -11,6 +11,7 @@ import io.wcm.handler.media.spi.MediaHandlerConfig;
 import io.wcm.handler.media.spi.MediaSource;
 import io.wcm.handler.mediasource.dam.DamMediaSource;
 import io.wcm.handler.mediasource.inline.InlineMediaSource;
+import io.wcm.handler.mediasource.ngdm.NextGenDynamicMediaMediaSource;
 
 /**
  * Media handler configuration.
@@ -21,6 +22,7 @@ public class MediaHandlerConfigImpl extends MediaHandlerConfig {
   static final String DAM_ROOT = "/content/dam";
 
   private static final List<Class<? extends MediaSource>> MEDIA_SOURCES = List.of(
+      NextGenDynamicMediaMediaSource.class,
       DamMediaSource.class,
       InlineMediaSource.class);
 

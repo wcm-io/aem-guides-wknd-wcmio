@@ -85,6 +85,10 @@
                             cq:policy="wknd/components/accordion/policy_1571070092603"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="wcm/core/components/policies/mapping"/>
+                        <responsiveimage
+                            cq:policy="wknd/components/responsiveimage/policy_1728316361250"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
                     </components>
                 </wknd>
             </container>

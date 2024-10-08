@@ -50,11 +50,11 @@
                         jcr:lastModified="{Date}2019-10-25T12:05:09.606-07:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wknd/components/image"
+                        sling:resourceType="wknd/components/responsiveimage"
                         alt="climber hanging sideways"
                         altValueFromDAM="false"
                         displayPopupTitle="false"
-                        fileReference="/content/dam/wknd-shared/en/activities/climbing/sport-climbing.jpg"
+                        fileReference="/content/dam/wknd/smart-crop/sport-climbing.jpg"
                         imageCrop="0,0,1271,579"
                         isDecorative="false"
                         titleValueFromDAM="false"/>
@@ -62,20 +62,20 @@
                         jcr:lastModified="{Date}2019-10-25T12:26:32.804-07:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wknd/components/image"
+                        sling:resourceType="wknd/components/responsiveimage"
                         altValueFromDAM="true"
                         displayPopupTitle="true"
-                        fileReference="/content/dam/wknd-shared/en/activities/climbing/climber-gear-rope.jpg"
+                        fileReference="/content/dam/wknd/smart-crop/climber-gear-rope.jpg"
                         isDecorative="false"
                         titleValueFromDAM="true"/>
                     <item_1572024817401
                         jcr:lastModified="{Date}2019-10-25T10:36:38.593-07:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wknd/components/image"
+                        sling:resourceType="wknd/components/responsiveimage"
                         altValueFromDAM="true"
                         displayPopupTitle="true"
-                        fileReference="/content/dam/wknd-shared/en/adventures/climbing-new-zealand/adobestock-277768563.jpeg"
+                        fileReference="/content/dam/wknd/smart-crop/adobestock-277768563.jpg"
                         isDecorative="false"
                         titleValueFromDAM="true"/>
                 </carousel>

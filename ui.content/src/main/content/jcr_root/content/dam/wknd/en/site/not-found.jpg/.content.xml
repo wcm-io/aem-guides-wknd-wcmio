@@ -25,6 +25,7 @@
             dam:Progressive="no"
             dam:sha1="614671a34cfa6c5305a4234ddd9fa8d98bb66d63"
             dam:size="{Long}400730"
+            dam:status="approved"
             dc:description="Dog playing fetch but cannot find the ball."
             dc:format="image/jpeg"
             dc:modified="{Date}2019-12-02T15:26:15.023-08:00"

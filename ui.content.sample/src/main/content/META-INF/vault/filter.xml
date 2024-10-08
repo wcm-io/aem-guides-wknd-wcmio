@@ -18,4 +18,8 @@
     <filter root="/home/groups/wknd" mode="merge" />
     <!-- Sample User-->
     <filter root="/home/users/wknd" />
+
+    <!-- Image Profile -->
+    <filter root="/conf/global/settings/dam/adminui-extension/imageprofile/Responsive-Media-Formats"/>
+
 </workspaceFilter>
