@@ -1144,17 +1144,17 @@
                             media="(min-width: 1536px)"
                             mediaFormat="extra_wide"
                             sizes="100vw"
-                            widths="1024,2048?"/>
+                            widths="1024,2048?,3072?"/>
                         <item1
                             jcr:primaryType="nt:unstructured"
                             media="(min-width: 1024px)"
                             mediaFormat="landscape"
                             sizes="100vw"
-                            widths="1024,2048?"/>
+                            widths="1024,2048?,3072?"/>
                         <item2
                             jcr:primaryType="nt:unstructured"
                             mediaFormat="square"
-                            widths="400,800"/>
+                            widths="512,1024?,2048?,3072?"/>
                     </wcmio:mediaResponsivePictureSources>
                 </policy_1728316361250>
             </responsiveimage>
