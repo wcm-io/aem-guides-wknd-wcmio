@@ -28,6 +28,7 @@
             dam:Progressive="no"
             dam:sha1="2298e25f29cefb6794eceb5fa76565dea5b564b5"
             dam:size="{Long}4161"
+            dam:status="approved"
             dc:format="image/png"
             dc:modified="{Date}2019-09-17T21:49:33.932-07:00"
             jcr:lastModified="{Date}2019-10-25T16:49:52.934-07:00"

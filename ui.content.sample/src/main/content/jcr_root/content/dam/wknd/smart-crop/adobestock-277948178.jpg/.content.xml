@@ -150,6 +150,7 @@
             dam:Progressive="no"
             dam:sha1="eed64a0b6cfe389823b820ab237f49b1be272a9a"
             dam:size="{Long}400012"
+            dam:status="approved"
             dam:TimeCreated="095950-0800"
             dc:creator="[Lachlan,Lachlan,Lachlan]"
             dc:creator_xmpArrayType="rdf:Seq"

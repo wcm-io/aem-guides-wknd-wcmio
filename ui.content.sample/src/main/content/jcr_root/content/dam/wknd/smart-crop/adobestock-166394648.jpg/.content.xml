@@ -136,6 +136,7 @@
             dam:Progressive="no"
             dam:sha1="911227977421c27da5d793293abc769a37254391"
             dam:size="{Long}529015"
+            dam:status="approved"
             dam:TimeCreated="144115-0700"
             dc:creator="[HOWL]"
             dc:creator_xmpArrayType="rdf:Seq"

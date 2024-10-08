@@ -149,6 +149,7 @@
             dam:Progressive="no"
             dam:sha1="877fa94e4d740eac66714cbce898afd59c3b5ebd"
             dam:size="{Long}688150"
+            dam:status="approved"
             dam:TimeCreated="194003-0700"
             dc:date="{Long}[20160330,20160330,20160330]"
             dc:date_xmpArrayType="rdf:Seq"

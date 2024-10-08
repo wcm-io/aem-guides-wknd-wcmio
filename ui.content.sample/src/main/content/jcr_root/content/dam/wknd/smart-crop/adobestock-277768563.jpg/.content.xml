@@ -24,6 +24,7 @@
             dam:Progressive="no"
             dam:sha1="d7cb8e901b0af156f572843ad43479d667bb1ed4"
             dam:size="{Long}174300"
+            dam:status="approved"
             dam:TimeCreated="191058-0700"
             dc:creator="[Fran Mares]"
             dc:creator_xmpArrayType="rdf:Seq"
