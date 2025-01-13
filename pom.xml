@@ -372,7 +372,7 @@
             <dependency>
                 <groupId>io.wcm</groupId>
                 <artifactId>io.wcm.caconfig.extensions</artifactId>
-                <version>1.10.0</version>
+                <version>1.10.2</version>
             </dependency>
             <dependency>
                 <groupId>io.wcm</groupId>
