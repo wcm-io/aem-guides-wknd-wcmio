@@ -5,12 +5,10 @@ name: Build
 
 on:
   push:
-    branches-ignore:
-      - experimental/**
+    branches:
+      - main
   pull_request:
     types: [opened, synchronize, reopened]
-    branches-ignore:
-      - experimental/**
   workflow_dispatch:
 
 jobs:
