@@ -129,6 +129,26 @@
             <artifactId>io.wcm.wcm.core.components</artifactId>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.site-api.processor</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.site-api.handler</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.site-api.generic-edit</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.site-api.generic-edit.handler</artifactId>
+            <scope>compile</scope>
+        </dependency>
 
         <!-- Testing -->
         <dependency>
@@ -183,9 +203,29 @@
         </dependency>
         <dependency>
             <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.testing.wcm-io-mock.site-api.processor</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
             <artifactId>io.wcm.testing.wcm-io-mock.handler</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.testing.wcm-io-mock.site-api.handler</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.testing.wcm-io-mock.site-api.generic-edit</artifactId>
+            <scope>test</scope>
+        </dependency> 
+        <dependency>
+            <groupId>io.wcm</groupId>
+            <artifactId>io.wcm.testing.wcm-io-mock.site-api.generic-edit.handler</artifactId>
+            <scope>test</scope>
+        </dependency> 
       
         <!-- Adobe AEM Dependencies -->
         <dependency>

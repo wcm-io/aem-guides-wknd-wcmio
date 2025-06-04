@@ -6,6 +6,7 @@ This is a fork of the [Adobe AEM WKND Sites Project](https://github.com/adobe/ae
 
 * [wcm.io WCM Core Components](https://wcm.io/wcm/core-components/)
 * [wcm.io Handler Infrastructure](https://wcm.io/handler/)
+* [wcm.io Site API](https://wcm.io/site-api/)
 
 
 ## Adobe Experience Manager compatibility
