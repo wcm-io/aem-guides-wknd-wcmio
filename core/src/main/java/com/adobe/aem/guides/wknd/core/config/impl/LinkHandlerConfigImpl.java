@@ -12,11 +12,16 @@ import org.osgi.service.component.annotations.Component;
 import com.adobe.aem.guides.wknd.core.config.AppTemplate;
 import com.day.cq.wcm.api.Page;
 
+import io.wcm.handler.link.markup.SimpleLinkMarkupBuilder;
 import io.wcm.handler.link.spi.LinkHandlerConfig;
+import io.wcm.handler.link.spi.LinkMarkupBuilder;
+import io.wcm.handler.link.spi.LinkProcessor;
 import io.wcm.handler.link.spi.LinkType;
 import io.wcm.handler.link.type.ExternalLinkType;
 import io.wcm.handler.link.type.InternalLinkType;
 import io.wcm.handler.link.type.MediaLinkType;
+import io.wcm.siteapi.genericedit.handler.link.SiteApiInternalLinkInheritGenericEditSelectorLinkPreProcessor;
+import io.wcm.siteapi.handler.link.SiteApiLinkPreProcessor;
 import io.wcm.wcm.commons.util.Template;
 
 /**
@@ -30,10 +35,31 @@ public class LinkHandlerConfigImpl extends LinkHandlerConfig {
       ExternalLinkType.class,
       MediaLinkType.class);
 
+  private static final List<Class<? extends LinkProcessor>> PRE_PROCESSORS = List.of(
+      SiteApiLinkPreProcessor.class, SiteApiInternalLinkInheritGenericEditSelectorLinkPreProcessor.class);
+
+  private static final List<Class<? extends LinkMarkupBuilder>> LINK_MARKUP_BUILDERS = List.of(
+      // Do not enable as we are using Core Component Link (via LinkWrapper) as decoration which
+      // exports the anchor HTML attributes to JSON - this would lead to a recursion
+      // DISABLED: SiteApiLinkMarkupBuilder.class,
+      SimpleLinkMarkupBuilder.class);
+
   @Override
   @SuppressWarnings("squid:S2384") // returned list is immutable
   public @NotNull List<Class<? extends LinkType>> getLinkTypes() {
     return DEFAULT_LINK_TYPES;
+  }
+
+  @Override
+  @SuppressWarnings("squid:S2384") // list is immutable
+  public @NotNull List<Class<? extends LinkProcessor>> getPreProcessors() {
+    return PRE_PROCESSORS;
+  }
+
+  @Override
+  @SuppressWarnings("squid:S2384") // list is immutable
+  public @NotNull List<Class<? extends LinkMarkupBuilder>> getMarkupBuilders() {
+    return LINK_MARKUP_BUILDERS;
   }
 
   @Override
