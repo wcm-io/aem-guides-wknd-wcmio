@@ -1,6 +1,6 @@
 package com.adobe.aem.guides.wknd.core.reference;
 
-import com.drew.lang.annotations.NotNull;
+import org.jetbrains.annotations.NotNull;
 
 import io.wcm.handler.media.Rendition;
 import io.wcm.handler.media.UriTemplateType;
