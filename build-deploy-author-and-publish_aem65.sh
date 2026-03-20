@@ -33,17 +33,17 @@ if [[ $0 == *":\\"* ]]; then
 fi
 
 # Build application
-./build-deploy.sh build --maven.profiles=fast,classic,aem65 "$@"
+./build-deploy.sh build --maven.profiles=fast,aem65 "$@"
 if [ "$?" -ne "0" ]; then
   pause_message
   exit $?
 fi
 
 # Deploy to author (in parallel)
-./build-deploy.sh deploy --maven.profiles=fast,classic,aem65 "$@" &
+./build-deploy.sh deploy --maven.profiles=fast,aem65 "$@" &
 
 # Deploy to publish (in parallel)
-./build-deploy.sh deploy --maven.profiles=fast,publish,classic,aem65 "$@" &
+./build-deploy.sh deploy --maven.profiles=fast,publish,aem65 "$@" &
 
 wait
 pause_message

@@ -36,7 +36,8 @@ To deploy WKND to AEM as a Cloud Service, this project's source code must be dep
 Pre-compiled AEM packages are available under the latest release for easy installation on local environments using [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 
 * [`aem-guides-wknd-wcmio.all-x.x.x.zip`](https://github.com/wcm-io/aem-guides-wknd-wcmio/releases/latest): AEM as a Cloud Service, default build
-* [`aem-guides-wknd-wcmio.all-x.x.x-classic.zip`](https://github.com/wcm-io/aem-guides-wknd-wcmio/releases/latest): AEM 6.5.x+
+* [`aem-guides-wknd-wcmio.all-x.x.x-aem65.zip`](https://github.com/wcm-io/aem-guides-wknd-wcmio/releases/latest): AEM 6.5.x
+* [`aem-guides-wknd-wcmio.all-x.x.x-aem66.zip`](https://github.com/wcm-io/aem-guides-wknd-wcmio/releases/latest): AEM 6.6.x
 
 ## How to build
 
@@ -51,14 +52,14 @@ For **AEM 6.5.x** (running Author/Publish on port 45025/45035):
 
 ```
 $ cd aem-guides-wknd/
-$ mvn clean install -PautoInstallSinglePackage -Pclassic,aem65
+$ mvn clean install -PautoInstallSinglePackage -Paem65
 ```
 
 For **AEM 6.6.x (AEM 6.5 LTS)** (running Author/Publish on port 45026/45036): 
 
 ```
 $ cd aem-guides-wknd/
-$ mvn clean install -PautoInstallSinglePackage -Pclassic,aem66
+$ mvn clean install -PautoInstallSinglePackage -Paem66
 ```
 
 ## Notes

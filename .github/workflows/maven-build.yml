@@ -18,7 +18,7 @@ jobs:
       matrix:
         os: [ ubuntu-latest ]
         java: [21]
-        profile: [ '', '-Pclassic,aem66']
+        profile: [ '', '-Paem65', '-Paem66']
 
     steps:
       # Check out Git repository

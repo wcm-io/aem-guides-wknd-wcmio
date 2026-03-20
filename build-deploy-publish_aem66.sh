@@ -19,7 +19,7 @@
 
 # Call with "help" parameter to display syntax information
 
-MAVEN_PROFILES="fast,publish,classic,aem66"
+MAVEN_PROFILES="fast,publish,aem66"
 
 if [[ $0 == *":\\"* ]]; then
   DISPLAY_PAUSE_MESSAGE=true

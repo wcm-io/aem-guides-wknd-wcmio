@@ -17,7 +17,7 @@
 #  limitations under the License.
 #  #L%
 
-MAVEN_PROFILES="fast,classic,aem65"
+MAVEN_PROFILES="fast,aem65"
 
 if [[ $0 == *":\\"* ]]; then
   DISPLAY_PAUSE_MESSAGE=true
