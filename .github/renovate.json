@@ -6,5 +6,6 @@
   ],
   "ignoreDeps": [
     "io.wcm.maven:io.wcm.maven.aem-dependencies"
-  ]
+  ],
+  "forkProcessing": "enabled"
 }
