@@ -22,7 +22,7 @@
     <parent>
         <groupId>io.wcm.samples.wknd</groupId>
         <artifactId>aem-guides-wknd-wcmio</artifactId>
-        <version>3.2.5-SNAPSHOT</version>
+        <version>4.0.5-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -142,9 +142,9 @@
                 </plugins>
             </build>
         </profile>
-        <!-- AEM 6.x Profile to include Core Components-->
+        <!-- AEM 6.5 Profile to include Core Components and Sling Context-Aware Configuration -->
         <profile>
-            <id>classic</id>
+            <id>aem65</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
@@ -157,7 +157,7 @@
                         <groupId>org.apache.jackrabbit</groupId>
                         <artifactId>filevault-package-maven-plugin</artifactId>                    
                         <configuration>
-                            <finalName>aem-guides-wknd-wcmio.all-${project.version}-classic</finalName>
+                            <finalName>aem-guides-wknd-wcmio.all-${project.version}-aem65</finalName>
                             <embeddeds combine.children="append">
                                 <embedded>
                                     <groupId>com.adobe.cq</groupId>
@@ -198,7 +198,7 @@
                         <groupId>io.wcm.maven.plugins</groupId>
                         <artifactId>wcmio-content-package-maven-plugin</artifactId>
                         <configuration>
-                            <packageFile>${project.build.directory}/aem-guides-wknd-wcmio.all-${project.version}-classic.zip</packageFile>
+                            <packageFile>${project.build.directory}/aem-guides-wknd-wcmio.all-${project.version}-aem65.zip</packageFile>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -213,6 +213,62 @@
                 </dependency>        
             </dependencies>
          </profile>
+        <!-- AEM 6.6 Profile to include Core Components -->
+        <profile>
+            <id>aem66</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <wknd-shared.version>${wknd-shared.65.version}</wknd-shared.version>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.jackrabbit</groupId>
+                        <artifactId>filevault-package-maven-plugin</artifactId>                    
+                        <configuration>
+                            <finalName>aem-guides-wknd-wcmio.all-${project.version}-aem66</finalName>
+                            <embeddeds combine.children="append">
+                                <embedded>
+                                    <groupId>com.adobe.cq</groupId>
+                                    <artifactId>core.wcm.components.content</artifactId>
+                                    <type>zip</type>
+                                    <target>/apps/wknd-vendor-packages/application/install</target>
+                                </embedded>
+                                <embedded>
+                                    <groupId>com.adobe.cq</groupId>
+                                    <artifactId>core.wcm.components.config</artifactId>
+                                    <type>zip</type>
+                                    <target>/apps/wknd-vendor-packages/application/install</target>
+                                </embedded>
+                                <embedded>
+                                    <groupId>com.adobe.cq</groupId>
+                                    <artifactId>core.wcm.components.core</artifactId>
+                                    <target>/apps/wknd-vendor-packages/application/install</target>
+                                </embedded>
+                            </embeddeds>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>io.wcm.maven.plugins</groupId>
+                        <artifactId>wcmio-content-package-maven-plugin</artifactId>
+                        <configuration>
+                            <packageFile>${project.build.directory}/aem-guides-wknd-wcmio.all-${project.version}-aem66.zip</packageFile>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencies>    
+                <!-- WKND Shared -->
+                <dependency>
+                    <groupId>com.adobe.aem.guides</groupId>
+                    <artifactId>aem-guides-wknd-shared.ui.content</artifactId>
+                    <version>${wknd-shared.version}</version>
+                    <type>zip</type>
+                </dependency>        
+            </dependencies>
+        </profile>
         <!-- Skip building of Cloud Manager ZIP in "fast" profile -->
         <profile>
             <id>fast</id>

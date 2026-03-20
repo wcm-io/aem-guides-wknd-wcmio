@@ -23,7 +23,7 @@
     <parent>
         <groupId>io.wcm.samples.wknd</groupId>
         <artifactId>aem-guides-wknd-wcmio</artifactId>
-        <version>3.2.5-SNAPSHOT</version>
+        <version>4.0.5-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -83,7 +83,17 @@
     <profiles>
         <!-- AEM 6.x Profile to include Core Components-->
         <profile>
-            <id>classic</id>
+            <id>aem65</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Exclude configuration for Filtering Content Processor - its not supported on AEM 6.5 (requires Sling Engine 2.11+) -->
+                <vault.excludes>**/io.wcm.siteapi.processor.impl.content.FilteringContentProcessor-*.cfg.json</vault.excludes>
+            </properties>
+        </profile>
+        <profile>
+            <id>aem66</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>

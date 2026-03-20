@@ -23,7 +23,7 @@
     <parent>
         <groupId>io.wcm.samples.wknd</groupId>
         <artifactId>aem-guides-wknd-wcmio</artifactId>
-        <version>3.2.5-SNAPSHOT</version>
+        <version>4.0.5-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -113,7 +113,13 @@
 
     <profiles>
         <profile>
-            <id>classic</id>
+            <id>aem65</id>
+            <properties>
+                <wknd-shared.version>${wknd-shared.65.version}</wknd-shared.version>
+            </properties>
+        </profile>
+        <profile>
+            <id>aem66</id>
             <properties>
                 <wknd-shared.version>${wknd-shared.65.version}</wknd-shared.version>
             </properties>

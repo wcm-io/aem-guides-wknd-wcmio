@@ -32,28 +32,18 @@ if [[ $0 == *":\\"* ]]; then
   DISPLAY_PAUSE_MESSAGE_WRAPPER=true
 fi
 
-# install AEM 6.5 with service pack
-mvn --non-recursive wcmio-content-package:install \
-    --activate-profiles=fast,classic \
-    -Dvault.artifact=adobe.binary.aem.65.servicepack:aem-service-pkg:zip:6.5.18.0 \
-    -Dvault.delayAfterInstallSec=30
-mvn --non-recursive wcmio-content-package:install \
-    --activate-profiles=fast,publish,classic \
-    -Dvault.artifact=adobe.binary.aem.65.servicepack:aem-service-pkg:zip:6.5.18.0 \
-    -Dvault.delayAfterInstallSec=30
-
 # Build application
-./build-deploy.sh build --maven.profiles=fast,classic "$@"
+./build-deploy.sh build --maven.profiles=fast,aem65 "$@"
 if [ "$?" -ne "0" ]; then
   pause_message
   exit $?
 fi
 
 # Deploy to author (in parallel)
-./build-deploy.sh deploy --maven.profiles=fast,classic "$@" &
+./build-deploy.sh deploy --maven.profiles=fast,aem65 "$@" &
 
 # Deploy to publish (in parallel)
-./build-deploy.sh deploy --maven.profiles=fast,publish,classic "$@" &
+./build-deploy.sh deploy --maven.profiles=fast,publish,aem65 "$@" &
 
 wait
 pause_message
