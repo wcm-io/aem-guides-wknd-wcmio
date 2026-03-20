@@ -55,9 +55,9 @@
     </modules>
 
     <properties>
-        <aem.sdk.api>2024.2.15262.20240224T002940Z-231200</aem.sdk.api>
+        <aem.sdk.api>2025.6.21193.20250609T124356Z-250500</aem.sdk.api>
         <componentGroupName>WKND Site</componentGroupName>
-        <core.wcm.components.version>2.27.0</core.wcm.components.version>
+        <core.wcm.components.version>2.29.0</core.wcm.components.version>
         <wknd-shared.version>3.1.0</wknd-shared.version>
         <wknd-shared.65.version>2.2.2</wknd-shared.65.version>
         <mockito.version>5.16.0</mockito.version>
@@ -165,7 +165,32 @@
                         <properties>
                             <cloudManagerTarget>none</cloudManagerTarget>
                         </properties>
+                        <validatorsSettings>
+                            <jackrabbit-nodetypes>
+                                <options>
+                                    <!-- use the nodetypes and namespaces from the aem-nodetypes.jar provided in the plugin dependencies -->
+                                    <cnds>tccl:aem.cnd</cnds>
+                                </options>
+                            </jackrabbit-nodetypes>
+                            <netcentric-aem-replication-metadata>
+                                <options>
+                                    <agentNames>publish,preview</agentNames><!-- default value is publish only  -->
+                                </options>
+                             </netcentric-aem-replication-metadata>
+                        </validatorsSettings>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>biz.netcentric.aem</groupId>
+                            <artifactId>aem-nodetypes</artifactId>
+                            <version>6.5.5.0</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>biz.netcentric.filevault.validator</groupId>
+                            <artifactId>aem-replication-metadata-validator</artifactId>
+                            <version>1.3.0</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>io.wcm.maven.plugins</groupId>

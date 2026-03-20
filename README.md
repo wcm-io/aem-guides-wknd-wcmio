@@ -14,9 +14,8 @@ This is a fork of the [Adobe AEM WKND Sites Project](https://github.com/adobe/ae
 WKND versions are compatible with the following versions of Adobe Experience Manager:
 
 * AEM as a Cloud Service
-* AEM 6.5 SP17 *)
-
-*) The Site API Filtering Content Processor is currently not compatible with AEM 6.5, it required Sling Engine 2.11 or higher. The default Content Processor is used in AEM 6.5 als fallback.
+* AEM 6.5 LTS (AEM 6.6)
+* AEM 6.5 SP17
 
 ## How to use/install
 
@@ -57,7 +56,7 @@ $ mvn clean install -PautoInstallSinglePackage -Pclassic
 
 WKND Version | AEM as a Cloud Service | AEM 6.5   | Java SE | Maven
 -------------|------------------------|-----------|---------|---------
-Latest (main branch)| Continual              | **6.5.17.0+** |  11  | 3.3.9+
+| Latest (main branch)  | Continual   | **6.5 LTS** | **21**   | **3.9.4+**  |
 
 Setup your local development environment for [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) or for [older versions of AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
@@ -76,7 +75,7 @@ Including `ui.content.sample` will **overwrite** any authored content during eac
 
 ### Powered by Adobe Stock
 
-Many of the images in the WKND Reference website are from Adobe Stock and are Third Party Material as defined in the Demo Asset Additional Terms at https://www.adobe.com/legal/terms.html. If you want to use an Adobe Stock image for other purposes beyond viewing this demo website, such as featuring it on a website, or in marketing materials, you can purchase a license on Adobe Stock.
+Many of the images in the WKND Reference website are from Adobe Stock and are Third Party Material as defined in the Demo Asset Additional Terms at <https://www.adobe.com/legal/terms.html>. If you want to use an Adobe Stock image for other purposes beyond viewing this demo website, such as featuring it on a website, or in marketing materials, you can purchase a license on Adobe Stock.
 
 With Adobe Stock, you have access to more than 140 million high-quality, royalty-free images including photos, graphics, videos and templates to jumpstart your creative projects.
 
