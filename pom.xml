@@ -27,7 +27,7 @@
     <groupId>io.wcm.samples.wknd</groupId>
     <artifactId>aem-guides-wknd-wcmio</artifactId>
     <packaging>pom</packaging>
-    <version>3.2.5-SNAPSHOT</version>
+    <version>4.0.5-SNAPSHOT</version>
      <name>WKND Sites Project wcm.io - Reactor Project</name>
     <description>WKND Sites Project</description>
     <url>https://github.com/wcm-io/aem-guides-wknd-wcmio</url>
@@ -172,11 +172,6 @@
                                     <cnds>tccl:aem.cnd</cnds>
                                 </options>
                             </jackrabbit-nodetypes>
-                            <netcentric-aem-replication-metadata>
-                                <options>
-                                    <agentNames>publish,preview</agentNames><!-- default value is publish only  -->
-                                </options>
-                             </netcentric-aem-replication-metadata>
                         </validatorsSettings>
                     </configuration>
                     <dependencies>
@@ -184,11 +179,6 @@
                             <groupId>biz.netcentric.aem</groupId>
                             <artifactId>aem-nodetypes</artifactId>
                             <version>6.5.5.0</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>biz.netcentric.filevault.validator</groupId>
-                            <artifactId>aem-replication-metadata-validator</artifactId>
-                            <version>1.3.0</version>
                         </dependency>
                     </dependencies>
                 </plugin>
