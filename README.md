@@ -15,7 +15,9 @@ WKND versions are compatible with the following versions of Adobe Experience Man
 
 * AEM as a Cloud Service
 * AEM 6.5 LTS (AEM 6.6)
-* AEM 6.5 SP17
+* AEM 6.5 SP17 *)
+
+*) The Site API Filtering Content Processor is currently not compatible with AEM 6.5, it required Sling Engine 2.11 or higher. The default Content Processor is used in AEM 6.5 als fallback.
 
 ## How to use/install
 
@@ -49,16 +51,15 @@ For **AEM 6.5.x** (running Author/Publish on port 45025/45035):
 
 ```
 $ cd aem-guides-wknd/
-$ mvn clean install -PautoInstallSinglePackage -Pclassic
+$ mvn clean install -PautoInstallSinglePackage -Pclassic,aem65
 ```
 
-## System Requirements
+For **AEM 6.6.x (AEM 6.5 LTS)** (running Author/Publish on port 45026/45036): 
 
-WKND Version | AEM as a Cloud Service | AEM 6.5   | Java SE | Maven
--------------|------------------------|-----------|---------|---------
-| Latest (main branch)  | Continual   | **6.5 LTS** | **21**   | **3.9.4+**  |
-
-Setup your local development environment for [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) or for [older versions of AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+```
+$ cd aem-guides-wknd/
+$ mvn clean install -PautoInstallSinglePackage -Pclassic,aem66
+```
 
 ## Notes
 

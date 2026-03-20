@@ -217,10 +217,19 @@
 
         <!-- AEM 6.5 -->
         <profile>
-            <id>classic</id>
+            <id>aem65</id>
             <properties>
                 <sling.url>http://localhost:45025</sling.url>
                 <sling.publish.url>http://localhost:45035</sling.publish.url>
+            </properties>
+        </profile>
+
+        <!-- AEM 6.6 -->
+        <profile>
+            <id>aem66</id>
+            <properties>
+                <sling.url>http://localhost:45026</sling.url>
+                <sling.publish.url>http://localhost:45036</sling.publish.url>
             </properties>
         </profile>
 

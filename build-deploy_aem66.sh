@@ -17,9 +17,7 @@
 #  limitations under the License.
 #  #L%
 
-# Call with "help" parameter to display syntax information
-
-MAVEN_PROFILES="fast,publish,classic,aem65"
+MAVEN_PROFILES="fast,classic,aem66"
 
 if [[ $0 == *":\\"* ]]; then
   DISPLAY_PAUSE_MESSAGE=true
