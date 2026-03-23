@@ -27,7 +27,7 @@
     <groupId>io.wcm.samples.wknd</groupId>
     <artifactId>aem-guides-wknd-wcmio</artifactId>
     <packaging>pom</packaging>
-    <version>4.0.5-SNAPSHOT</version>
+    <version>4.0.3-SNAPSHOT</version>
      <name>WKND Sites Project wcm.io - Reactor Project</name>
     <description>WKND Sites Project</description>
     <url>https://github.com/wcm-io/aem-guides-wknd-wcmio</url>
