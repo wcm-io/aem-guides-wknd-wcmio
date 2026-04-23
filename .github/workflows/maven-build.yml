@@ -1,5 +1,4 @@
-# This workflow will build a Java project with Maven
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+# Build validation
 
 name: Build
 
@@ -16,23 +15,14 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-latest ]
         java: [21]
+        os: [ubuntu-latest]
+        distribution: [temurin]
         profile: [ '', '-Paem65', '-Paem66']
 
     steps:
-      # Check out Git repository
-      - name: Checkout code
-        uses: actions/checkout@v5
-
-      # Set up environment with Java and Maven
-      - name: Setup JDK
-        uses: actions/setup-java@v5
+      - name: Maven Build
+        uses: wcm-io-devops/github-action-maven-build@v1
         with:
-          distribution: temurin
           java-version: ${{ matrix.java }}
-          cache: maven
-
-      # Build & Test
-      - name: Build & Test with Maven
-        run: mvn -s ./.maven-settings.xml -Pcontinuous-integration -B -U clean verify ${{ matrix.profile }}
+          maven-additional-args: ${{ matrix.profile }}
