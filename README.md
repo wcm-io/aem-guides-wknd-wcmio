@@ -14,10 +14,8 @@ This is a fork of the [Adobe AEM WKND Sites Project](https://github.com/adobe/ae
 WKND versions are compatible with the following versions of Adobe Experience Manager:
 
 * AEM as a Cloud Service
-* AEM 6.5 LTS (AEM 6.6)
-* AEM 6.5 SP17 *)
-
-*) The Site API Filtering Content Processor is currently not compatible with AEM 6.5, it required Sling Engine 2.11 or higher. The default Content Processor is used in AEM 6.5 als fallback.
+* AEM 6.6.2+ (AEM 6.5 LTS SP2+)
+* AEM 6.5.24+
 
 ## How to use/install
 
